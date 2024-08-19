@@ -1,4 +1,3 @@
-import "./Home.css";
 import AppRoutes from "../rutas";
 
 function Home() {
