@@ -1,0 +1,56 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+  align-items: center;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+}
+img {
+  height: 40px;
+  width: auto;
+  margin-right: 8px;
+}
+
+.marca p {
+  color: var(--amarillo);
+  font-family: "Rochester";
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.enlaces {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 15px;
+}
+
+input {
+  width: auto;
+  padding: 6px 8px;
+  border: none;
+  background-color: var(--rosa);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+}
+
+@font-face {
+  font-family: "Rochester";
+  src: url(../assets/RochesterFont/Rochester-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}

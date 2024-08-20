@@ -1,12 +1,27 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #fffcfc;
+  background-color: var(--rosa-claro);
 
-  --primary-color: #131313;
-  --secondary-color: #292929;
-  --border-color: #3a3a3a;
-  --text-color: #ffffff;
+  --rosa: #d42f69;
+  --amarillo: #eea93b;
+  --verde: #649e4c;
+  --rojo: #ff0000;
+  --text: #111111;
+  --rosa-claro: #fdf4f7;
+  --rosa-fuerte: #f8dee7;
 }
 body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  color: var(--rosa);
+  text-decoration: none;
+  font-weight: bold;
+}
+p {
+  font-size: 15px;
   margin: 0;
 }

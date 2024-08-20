@@ -1,10 +1,11 @@
 import "./App.css";
+import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 
 function App() {
-  console.log("prueba");
   return (
     <>
+      <Navbar />
       <Login />
     </>
   );

@@ -1,19 +1,26 @@
+import "./Login.css";
+
 export function Login() {
   return (
-    <div>
-      <h1>Login Page</h1>
+    <div className="contenedor ">
+      <div className="titulo">
+        <h1>Hola de nuevo!</h1>
+        <p>👋</p>
+      </div>
+      <p>
+        Inicia sesión o <a href="">registrate</a> para solicitar un turno
+      </p>
       <form>
         <label>
-          Username:
-          <input type="text" name="username" />
+          <p>Correo electronico</p>
+          <input type="email" name="email"></input>
         </label>
-        <br />
         <label>
-          Password:
+          <p>Contraseña</p>
           <input type="password" name="password" />
         </label>
-        <br />
-        <button type="submit">Login</button>
+        <p className="MensajeError">* Correo o contraseña incorrectos.</p>
+        <button type="submit">Ingresar</button>
       </form>
     </div>
   );

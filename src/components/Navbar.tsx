@@ -1,26 +1,24 @@
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+/*import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";*/
+import "./Navbar.css";
 
-//NO FUNCIONA NADAAAAA
-
-const Navbar = () => {
+function Navbar() {
   return (
     <header>
       <div className="marca">
-        {/* Verifica la ruta de la imagen */}
-        <img src={process.env.PUBLIC_URL + "../assets/logo.png"} alt="Logo" />
-        <p>Sentirse Bien</p>
+        <img src="src\assets\logo.png"></img>
+        <p>Sentirse bien</p>
       </div>
-      <nav>
-        <Link to="/inicio">Inicio</Link>
-        <Link to="/servicios">Servicios</Link>
-        <Link to="/turnos">Turnos</Link>
-        <Button />
-      </nav>
+      <div className="enlaces">
+        <a href="">Inicio</a>
+        <a href="">Servicios</a>
+        <a href="">Turnos</a>
+        <input type="submit" value="Ingresar" />
+      </div>
     </header>
   );
-};
-
+}
+/*
 const Button = () => {
   const navigate = useNavigate();
   const handleClick = () => {
@@ -28,5 +26,5 @@ const Button = () => {
   };
   return <button onClick={handleClick}>Ingresar</button>;
 };
-
+*/
 export default Navbar;
