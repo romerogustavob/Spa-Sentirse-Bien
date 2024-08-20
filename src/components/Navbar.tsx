@@ -6,8 +6,13 @@ function Navbar() {
   return (
     <header>
       <div className="marca">
-        <img src="src\assets\logo.png"></img>
-        <p>Sentirse bien</p>
+        <a href="">
+          <img src="src\assets\logo.png"></img>
+        </a>
+
+        <a href="">
+          <p>Sentirse bien</p>
+        </a>
       </div>
       <div className="enlaces">
         <a href="">Inicio</a>
