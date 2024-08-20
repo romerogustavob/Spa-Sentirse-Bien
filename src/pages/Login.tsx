@@ -1,4 +1,5 @@
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 export function Login() {
   return (
@@ -8,7 +9,8 @@ export function Login() {
         <p>👋</p>
       </div>
       <p>
-        Inicia sesión o <a href="">regístrate</a> para solicitar un turno
+        Inicia sesión o <Link to="/registro">regístrate</Link> para solicitar un
+        turno
       </p>
       <form>
         <label>
@@ -28,13 +30,14 @@ export function Login() {
 
 export function Register() {
   return (
-    <div className="contenedor ">
+    <div className="contenedor R">
       <div className="titulo">
         <h1>Bienvenido!</h1>
-        <p>🙌</p>
+        <p id="R">🙌</p>
       </div>
       <p>
-        <a href="">Inicia sesión</a> o regístrate para solicitar un turno
+        <Link to="/login">Inicia sesión</Link> o regístrate para solicitar un
+        turno
       </p>
       <form>
         <label>

@@ -14,7 +14,6 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 a {
   color: var(--rosa);
@@ -24,4 +23,9 @@ a {
 p {
   font-size: 15px;
   margin: 0;
+}
+@media screen and (max-width: 430px) {
+  #root {
+    padding: 0px;
+  }
 }

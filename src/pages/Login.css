@@ -26,17 +26,20 @@ body::before {
 }
 
 .contenedor {
+  margin-top: 80px;
   background-color: white;
   border-radius: 1em;
-  padding: 3em 4em;
+  padding: 3em 3em;
   box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
   z-index: 1;
   position: relative;
+  width: 370px;
+  height: auto;
 }
 .titulo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 h1 {
   color: var(--rosa);
@@ -46,6 +49,10 @@ h1 {
 .titulo p {
   font-size: 50px;
   margin: -20px -5px 0 10px;
+}
+#R {
+  font-size: 60px;
+  margin: -31px -5px 0 10px;
 }
 
 p {
@@ -98,4 +105,25 @@ button {
   font-size: 16px;
   color: white;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 30px;
+  }
+  .titulo p {
+    font-size: 40px;
+  }
+  .contenedor {
+    font-size: 12px;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 430px) {
+  body::before {
+    background-image: none;
+  }
+  .contenedor {
+    box-shadow: none;
+  }
 }

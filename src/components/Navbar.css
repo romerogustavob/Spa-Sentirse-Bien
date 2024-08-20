@@ -54,3 +54,26 @@ input {
   font-weight: normal;
   font-style: normal;
 }
+
+@media screen and (max-width: 550px) {
+  .marca a p {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .enlaces {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: -5px;
+    gap: 10px;
+  }
+  #root a {
+    font-size: 12px;
+  }
+  input {
+    font-size: 12px;
+  }
+}
