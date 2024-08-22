@@ -15,6 +15,7 @@ abstract class User {
         this.email = email;
         this.password = password;
     }
+    
     setNames() {
         const nombreInput = document.getElementById('nombre') as HTMLInputElement
         
@@ -22,7 +23,8 @@ abstract class User {
             this.names = nombreInput.value
         }
         else {
-            this.setNames()
+            alert("Nombre inválido. Inténtalo de nuevo.");
+            //this.setNames()
         }
     }
 
@@ -30,10 +32,11 @@ abstract class User {
         const apellidoInput = document.getElementById('apellido') as HTMLInputElement
         
         if (this.isValidName(apellidoInput.value)) {
-            this.names = apellidoInput.value
+            this.surnames = apellidoInput.value
         }
         else {
-            this.setSurnames()
+            alert("Apellido inválido. Inténtalo de nuevo.");
+            //this.setSurnames()
         }
     }
 
@@ -44,7 +47,8 @@ abstract class User {
             this.names = userNameInput.value
         }
         else {
-            this.setUserName()
+            alert("Nombre de usuario inválido. Inténtalo de nuevo.");
+            //this.setUserName()
         }
     }
 
@@ -55,7 +59,8 @@ abstract class User {
             this.names = emailInput.value
         }
         else {
-            this.setEmail()
+            alert("Correo electrónico inválido. Inténtalo de nuevo.");
+            //this.setEmail()
         }
     }
 
@@ -66,22 +71,23 @@ abstract class User {
             this.names = pswdInput.value
         }
         else {
-            this.setPassword()
+            alert("Contraseña inválida. Inténtalo de nuevo.");
+            //this.setPassword()
         }
     }
 
     private isValidName (name: string) {
-        let regex = new RegExp(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]{3, 50}+$/)
+        const regex = new RegExp(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]{3,50}$/)
         return regex.test(name)
     }
 
     private isValidUserName (user_name: string) {
-        let regex = new RegExp(/^[a-zA-Z0-9\-_\.\,\!\?\(\)]+$/)
+        const regex = new RegExp(/^[a-zA-Z0-9- .,!?()]+$/)
         return regex.test(user_name)
     }
 
-     private isValidEmail (email: string) {
-        let regex = new RegExp(/^[a-zA-Z0-9.!#$%&*+/=?^_{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
+    private isValidEmail (email: string) {
+        const regex = new RegExp(/^[a-zA-Z0-9.!#$%&*+/=?^_{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
         return regex.test(email)
     }
 
