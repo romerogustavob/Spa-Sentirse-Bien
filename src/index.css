@@ -1,6 +1,5 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: var(--rosa-claro);
 
   --rosa: #d42f69;
   --amarillo: #eea93b;
@@ -11,21 +10,79 @@
   --rosa-fuerte: #f8dee7;
 }
 body {
-  margin: 0;
+  margin: 0px;
   display: flex;
   justify-content: center;
+  background-color: var(--rosa-claro);
 }
 a {
   color: var(--rosa);
   text-decoration: none;
   font-weight: bold;
 }
+.MarcaName {
+  color: var(--amarillo);
+  font-family: "Rochester";
+  font-weight: normal;
+}
 p {
   font-size: 15px;
   margin: 0;
 }
+.textbox {
+  padding: 10px 10px;
+  border-style: solid;
+  border-color: var(--rosa-fuerte); /* Color del borde */
+  border-width: 1px;
+  border-radius: 5px;
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+  background-color: var(--rosa-claro);
+  font-size: 15px;
+  color: var(--rosa);
+}
+
+.MainButton {
+  padding: 10px;
+  border: none;
+  background-color: var(--rosa);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  transition: transform 0.3s ease; /* Transición suave */
+}
+.SecondButton {
+  padding: 10px;
+  border: none;
+  background-color: var(--rosa-fuerte);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--rosa);
+  transition: transform 0s ease; /* Transición suave */
+}
+
+.MainButton:hover {
+  transform: scale(1.05);
+}
+.SecondButton:hover {
+  transform: scale(1.05);
+}
+
+.MensajeError {
+  color: var(--rojo);
+  text-align: left;
+  font-size: 11px;
+  /*display: none*/
+}
+
 @media screen and (max-width: 430px) {
   #root {
     padding: 0px;
+  }
+}
+@media screen and (max-width: 450px) {
+  body {
+    background-color: white;
   }
 }

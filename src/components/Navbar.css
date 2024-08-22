@@ -1,10 +1,11 @@
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
   background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
   z-index: 3;
   display: flex;
   justify-content: space-between;
@@ -23,10 +24,7 @@ img {
   margin-right: 8px;
 }
 
-.marca p {
-  color: var(--amarillo);
-  font-family: "Rochester";
-  font-weight: normal;
+.MarcaName {
   font-size: 30px;
 }
 
@@ -37,15 +35,10 @@ img {
   gap: 15px;
 }
 
-input {
+.enlaces .MainButton {
   width: auto;
   padding: 6px 8px;
-  border: none;
-  background-color: var(--rosa);
-  border-radius: 6px;
-  cursor: pointer;
   font-size: 15px;
-  color: white;
 }
 
 @font-face {

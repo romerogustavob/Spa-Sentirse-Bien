@@ -1,4 +1,4 @@
-import AppRoutes from "../rutas";
+import AppRoutes from "../routes";
 
 function Gallery() {
   return (
