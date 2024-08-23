@@ -6,8 +6,15 @@
   --verde: #649e4c;
   --rojo: #ff0000;
   --text: #111111;
+  --gris: #303030;
+  --gris-claro: #a1a1a1;
+  --blanco: #ffffff;
   --rosa-claro: #fdf4f7;
   --rosa-fuerte: #f8dee7;
+  --header: rgba(255, 255, 255, 0.9);
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   margin: 0px;
@@ -50,6 +57,7 @@ p {
   font-size: 16px;
   color: white;
   transition: transform 0.3s ease; /* Transición suave */
+  opacity: 85%;
 }
 .SecondButton {
   padding: 10px;
@@ -59,14 +67,17 @@ p {
   cursor: pointer;
   font-size: 16px;
   color: var(--rosa);
-  transition: transform 0s ease; /* Transición suave */
+  transition: transform 0.3s ease; /* Transición suave */
+  opacity: 85%;
 }
 
 .MainButton:hover {
   transform: scale(1.05);
+  opacity: 95%;
 }
 .SecondButton:hover {
   transform: scale(1.05);
+  opacity: 95%;
 }
 
 .MensajeError {

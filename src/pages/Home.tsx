@@ -5,25 +5,27 @@ function Home() {
     <>
       <main>
         <section className="first">
-          <div className="text">
-            <h3>Ven con nosotros</h3>
-            <h1>
-              Relájate, Renueva, Revitaliza y
-              <h1 className="MarcaName">Sientete bien</h1>
-            </h1>
-          </div>
-          <div className="buttons">
-            <input
-              className="MainButton"
-              type="button"
-              value="Solicitar Turno"
-            />
-            <input className="SecondButton" type="button" value="Consultas" />
+          <div className="first-content">
+            <div className="text">
+              <h2>Venga con nosotros a</h2>
+              <h1 className="titulo">
+                Revitalizarse, Relajarse, Renovarse, y
+                <p className="MarcaName"> Sentirse bien</p>
+              </h1>
+            </div>
+            <div className="buttons">
+              <input
+                className="MainButton"
+                type="button"
+                value="Solicitar Turno"
+              />
+              <input className="SecondButton" type="button" value="Consultas" />
+            </div>
           </div>
         </section>
         <section className="about">
           <img src="/src/assets/imagen1.jpg" alt="imagen1" />
-          <div>
+          <div className="text">
             <h3>NOSOTROS</h3>
             <h1>¿Qué buscamos?</h1>
             <p>
@@ -33,12 +35,14 @@ function Home() {
               completamente de la rutina y disfrute de un momento de bienestar,
               en total armonía con la naturaleza.
             </p>
-            <a href="#contact">Contáctanos</a>
+            <a className="SecondButton" href="#contact">
+              Contáctanos
+            </a>
           </div>
         </section>
-        <section className="contact">
-          <div>
-            <h3>Contáctanos</h3>
+        <section className="footer" id="contact">
+          <div className="contact">
+            <h3>CONTÁCTANOS</h3>
             <div className="item">
               <img src="/src/assets/ubicacion.png" alt="Ubicacion" />
               <p>Av. Rivadavia N°4358. Resistencia, Chaco.</p>
@@ -55,8 +59,15 @@ function Home() {
               <img src="/src/assets/facebook.png" alt="facebook" />
               <p>@Sentirse.bien</p>
             </div>
+            <div className="itemEmpleo">
+              <h3>EMPLEO</h3>
+              <div className="archivo">
+                <input type="file" />
+                <input className="submit" type="submit" value={"Enviar CV"} />
+              </div>
+            </div>
           </div>
-          <img src="src/assets/temp.png" alt="maps" />
+          <img className="temp" src="src/assets/temp.png" alt="maps" />
         </section>
       </main>
     </>

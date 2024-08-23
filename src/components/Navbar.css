@@ -4,7 +4,7 @@ header {
   left: 0;
   width: 100%;
   height: auto;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--header);
   backdrop-filter: blur(10px);
   z-index: 3;
   display: flex;
@@ -12,13 +12,14 @@ header {
   padding: 10px 20px;
   box-sizing: border-box; /* Incluye el padding en el ancho total */
   align-items: center;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.05);
 }
 
-.marca {
+header .marca {
   display: flex;
   align-items: center;
 }
-img {
+header img {
   height: 40px;
   width: auto;
   margin-right: 8px;
@@ -28,11 +29,11 @@ img {
   font-size: 30px;
 }
 
-.enlaces {
+header .enlaces {
   display: flex;
   align-items: center;
   justify-content: right;
-  gap: 15px;
+  gap: 20px;
 }
 
 .enlaces .MainButton {
@@ -48,14 +49,14 @@ img {
   font-style: normal;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 565px) {
   .marca a p {
     visibility: hidden;
     display: none;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
   .enlaces {
     display: flex;
     align-items: center;
@@ -68,5 +69,36 @@ img {
   }
   input {
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 370px) {
+  img {
+    height: 30px;
+  }
+  header {
+    padding: 10px 5px;
+  }
+  .enlaces .MainButton {
+    width: auto;
+    padding: 6px 4px;
+    font-size: 13px;
+    margin-right: 3px;
+  }
+}
+@media screen and (max-width: 340px) {
+  img {
+    height: 25px;
+  }
+  header {
+    padding: 10px 2px;
+  }
+  .enlaces .MainButton {
+    width: auto;
+    padding: 5px 3px;
+    font-size: 12px;
+    margin-right: 3px;
+  }
+  header .enlaces {
+    gap: 10px;
   }
 }

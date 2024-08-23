@@ -15,7 +15,7 @@
 
 .contenedor {
   margin-top: 120px;
-  background-color: white;
+  background-color: var(--blanco);
   border-radius: 1em;
   padding: 3em 3em;
   box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
@@ -32,7 +32,7 @@ form {
   justify-content: center;
 }
 
-.titulo {
+.contenedor .titulo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,6 +101,6 @@ form .MainButton {
     background-image: none;
   }
   body {
-    background-color: white;
+    background-color: var(--blanco);
   }
 }
