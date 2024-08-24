@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
@@ -39,6 +40,41 @@ function Home() {
               Contáctanos
             </a>
           </div>
+        </section>
+        <section className="top">
+          <h4 className="titulo">NUESTRO TOP</h4>
+          <h2>Los Servicios Más Populares</h2>
+          <div className="container">
+            <div className="tarjeta">
+              <img src="src/assets/masaje-antiestres.jpg" alt="masaje" />
+              <div>
+                <h4>Masajes Antiestrés</h4>
+                <p>
+                  Relaja cuerpo y mente, aliviando tensión muscular y estrés.
+                </p>
+              </div>
+            </div>
+            <div className="tarjeta">
+              <img src="src/assets/Limpieza.jpg" alt="limpieza" />
+              <div>
+                <h4>Limpieza profunda + Hidratación</h4>
+                <p>Limpia y rehidrata la piel, dejándola fresca y luminosa.</p>
+              </div>
+            </div>
+            <div className="tarjeta">
+              <img src="src/assets/Velaslim.jpg" alt="" />
+              <div>
+                <h4>VelaSlim</h4>
+                <p>
+                  Eliminación de la grasa en zonas como abdomen, cintura,
+                  muslos, brazos y glúteos.
+                </p>
+              </div>
+            </div>
+          </div>
+          <Link to="/login" className="MainButton">
+            Ver Más
+          </Link>
         </section>
         <section className="footer" id="contact">
           <div className="contact">

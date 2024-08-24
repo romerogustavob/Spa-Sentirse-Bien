@@ -51,7 +51,7 @@ h1 {
   margin: -31px -5px 0 10px;
 }
 
-p {
+.contenedor p {
   text-align: center;
   margin-left: 3px;
 }
@@ -62,7 +62,7 @@ label {
   text-align: left;
 }
 
-label p {
+.contenedor form p {
   text-align: left;
   margin: 0 3px 3px;
   color: var(--rosa);
