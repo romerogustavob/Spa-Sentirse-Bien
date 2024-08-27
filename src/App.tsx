@@ -1,8 +1,8 @@
-//import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login, { Register } from "./pages/Login";
 import Navbar from "./components/Navbar";
+
 
 function App() {
   return (

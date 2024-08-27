@@ -1,4 +1,4 @@
-abstract class User {
+export abstract class User {
 
     id: number;
     names: string;
@@ -116,5 +116,28 @@ abstract class User {
         
             return has_upper && has_lower && has_number && has_simbol
         }
+    }
+}
+
+export class empleado extends User{
+    
+    constructor(id: number, names: string, surnames: string, user_name: string, email: string, password: string) {
+        super(id, names,surnames,user_name, email, password)
+    }
+
+    public static cargarServicio(){
+
+    }
+    
+
+}
+
+export class cliente extends User{
+    constructor(id: number, names: string, surnames: string, user_name: string, email: string, password: string) {
+        super(id, names,surnames,user_name, email, password)
+    }
+
+    public static GanerarComentario() {
+        
     }
 }
