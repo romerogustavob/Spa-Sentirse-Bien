@@ -123,10 +123,11 @@
   text-align: left;
   width: 21%;
   margin: 0;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: var(--blanco);
   box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
   padding: 0 0 30px;
+  overflow: hidden;
 }
 .top h4 {
   margin: 20px 0 0;
