@@ -46,6 +46,11 @@ p {
   background-color: var(--rosa-claro);
   font-size: 15px;
   color: var(--rosa);
+  outline: none;
+}
+input::placeholder {
+  color: var(--rosa);
+  opacity: 0.6;
 }
 
 .MainButton {

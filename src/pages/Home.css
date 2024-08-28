@@ -108,7 +108,7 @@
   align-content: center;
   text-align: center;
   justify-content: center;
-  padding: 20px 0 150px;
+  padding: 20px 0 130px;
 }
 .top .container {
   display: flex;
@@ -125,7 +125,7 @@
   margin: 0;
   border-radius: 8px;
   background-color: var(--blanco);
-  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.1);
   padding: 0 0 30px;
   overflow: hidden;
 }
@@ -155,6 +155,21 @@
   display: flex;
   width: 90px;
   margin: 25px auto;
+}
+
+.comments-section {
+  margin: 0 10% 120px;
+}
+.comments-section hr {
+  color: var(--rosa);
+  border-style: solid;
+  margin: 20px 20px;
+}
+.comments-container {
+  background-color: var(--blanco);
+  border-radius: 25px;
+  padding: 40px 30px;
+  box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.1);
 }
 
 .footer {

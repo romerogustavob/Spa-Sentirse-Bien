@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
+import Comments from "../components/comments";
 
 function Home() {
   return (
@@ -75,6 +76,13 @@ function Home() {
           <Link to="/login" className="MainButton">
             Ver Más
           </Link>
+        </section>
+        <section className="comments-section">
+          <hr />
+          <div className="comments-container">
+            <Comments />
+          </div>
+          <hr />
         </section>
         <section className="footer" id="contact">
           <div className="contact">
