@@ -1,0 +1,75 @@
+.background-image {
+  background-image: url("../assets/Fondo2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  filter: blur(4px);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.servicios-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 80vw;
+  padding: 50px 40px;
+  margin: 130px 0;
+  background-color: var(--header);
+  border-radius: 30px;
+}
+.servicios-page .titulo h1 {
+  letter-spacing: 5px;
+}
+
+.servicios-page hr {
+  color: var(--rosa);
+  border-style: solid;
+  margin: 20px 0;
+}
+
+.servicios-types {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.services-section h3 {
+  font-size: 23px;
+  color: var(--gris);
+  letter-spacing: 1px;
+}
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 2%;
+  margin: 0;
+  width: 100%;
+  justify-content: stretch;
+}
+
+@media screen and (max-width: 460px) {
+  .servicios-page {
+    width: 90vw;
+    margin: 70px 0;
+  }
+  .background-image {
+    background-color: var(--blanco);
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    filter: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}

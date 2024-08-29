@@ -37,12 +37,12 @@
   align-items: center;
   justify-content: center;
 }
-h1 {
+.ingreso h1 {
   color: var(--rosa);
   font-size: 40px;
   margin: 0;
 }
-.titulo p {
+.ingreso .titulo p {
   font-size: 50px;
   margin: -20px -5px 0 10px;
 }
@@ -56,7 +56,7 @@ h1 {
   margin-left: 3px;
 }
 
-label {
+.ingreso label {
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -68,11 +68,11 @@ label {
   color: var(--rosa);
 }
 
-.textbox {
+.ingreso .textbox {
   width: 100%;
 }
 
-.MensajeError {
+.ingreso .MensajeError {
   margin: 0px;
 }
 
@@ -82,10 +82,10 @@ label {
 }
 
 @media screen and (max-width: 550px) {
-  h1 {
+  .ingreso h1 {
     font-size: 30px;
   }
-  .titulo p {
+  .ingreso .titulo p {
     font-size: 40px;
   }
   .contenedor {
@@ -97,7 +97,7 @@ label {
   .contenedor {
     box-shadow: none;
   }
-  .background-image {
+  .ingreso .background-image {
     background-image: none;
   }
   body {

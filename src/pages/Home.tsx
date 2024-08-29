@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Comments from "../components/comments";
+import Servicio from "../components/servicio";
+import { useLayoutEffect } from "react";
 
 function Home() {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <main>
@@ -16,11 +21,9 @@ function Home() {
               </h1>
             </div>
             <div className="buttons">
-              <input
-                className="MainButton"
-                type="button"
-                value="Solicitar Turno"
-              />
+              <Link className="MainButton" to="/servicios">
+                Solicitar Turno
+              </Link>
               <input className="SecondButton" type="button" value="Consultas" />
             </div>
           </div>
@@ -28,7 +31,7 @@ function Home() {
         <section className="about">
           <img src="/src/assets/imagen1.jpg" alt="imagen1" />
           <div className="text">
-            <h3>NOSOTROS</h3>
+            <h4>NOSOTROS</h4>
             <h1>¿Qué buscamos?</h1>
             <p>
               Buscamos atraer la atención de nuestro clientes a través de
@@ -46,34 +49,24 @@ function Home() {
           <h4 className="titulo">NUESTRO TOP</h4>
           <h2>Los Servicios Más Populares</h2>
           <div className="container">
-            <div className="tarjeta">
-              <img src="src/assets/masaje-antiestres.jpg" alt="masaje" />
-              <div>
-                <h4>Masajes Antiestrés</h4>
-                <p>
-                  Relaja cuerpo y mente, aliviando tensión muscular y estrés.
-                </p>
-              </div>
-            </div>
-            <div className="tarjeta">
-              <img src="src/assets/Limpieza.jpg" alt="limpieza" />
-              <div>
-                <h4>Limpieza profunda + Hidratación</h4>
-                <p>Limpia y rehidrata la piel, dejándola fresca y luminosa.</p>
-              </div>
-            </div>
-            <div className="tarjeta">
-              <img src="src/assets/Velaslim.jpg" alt="" />
-              <div>
-                <h4>VelaSlim</h4>
-                <p>
-                  Eliminación de la grasa en zonas como abdomen, cintura,
-                  muslos, brazos y glúteos.
-                </p>
-              </div>
-            </div>
+            <Servicio
+              img="src/assets/masaje-antiestres.jpg"
+              titulo="Masajes Antiestrés"
+              texto="Relaja cuerpo y mente, aliviando tensión muscular y estrés."
+            />
+            <Servicio
+              img="src/assets/Limpieza.jpg"
+              titulo="Limpieza profunda + Hidratación"
+              texto="Limpia y rehidrata la piel, dejándola fresca y luminosa."
+            />
+            <Servicio
+              img="src/assets/Velaslim.jpg"
+              titulo="VelaSlim"
+              texto="Eliminación de la grasa en zonas como abdomen, cintura,
+                  muslos, brazos y glúteos."
+            />
           </div>
-          <Link to="/login" className="MainButton">
+          <Link to="/servicios" className="MainButton">
             Ver Más
           </Link>
         </section>

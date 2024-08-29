@@ -1,0 +1,68 @@
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 250px;
+  margin: 0;
+  border-radius: 8px;
+  background-color: var(--blanco);
+  box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.1);
+  padding: 0 0 30px;
+  overflow: hidden;
+}
+.tarjeta h4 {
+  margin: 20px 0 0;
+  color: var(--rosa);
+  padding: 0 20px;
+}
+.tarjeta p {
+  padding: 10px 20px 0;
+  color: var(--gris);
+  font-weight: normal;
+}
+.tarjeta img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover; /* La imagen llena el contenedor */
+}
+@media screen and (max-width: 900px) {
+  .tarjeta {
+    width: 180px;
+    padding: 0 0 15px;
+  }
+  .tarjeta p {
+    padding: 5px 13px 0;
+    font-size: 13px;
+  }
+  .tarjeta h4 {
+    padding: 0px 13px 5px;
+    font-size: 13px;
+  }
+  .tarjeta img {
+    height: 120px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .tarjeta {
+    width: 150px;
+  }
+  .tarjeta p {
+    padding: 5px 13px 0;
+    font-size: 11px;
+  }
+  .tarjeta h4 {
+    padding: 5px 13px 0;
+    font-size: 13px;
+  }
+  .tarjeta img {
+    height: 100px;
+  }
+}
+@media screen and (max-width: 385px) {
+  .tarjeta {
+    width: 130px;
+  }
+  .tarjeta h4 {
+    font-size: 11px;
+  }
+}

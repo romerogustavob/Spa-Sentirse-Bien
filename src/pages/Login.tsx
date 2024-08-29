@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export function Login() {
   return (
-    <>
+    <div className="ingreso">
       <div className="background-image" />
       <div className="contenedor ">
         <div className="titulo">
@@ -29,13 +29,13 @@ export function Login() {
           </button>
         </form>
       </div>
-    </>
+    </div>
   );
 }
 
 export function Register() {
   return (
-    <>
+    <div className="ingreso">
       <div className="background-image" />
       <div className="contenedor R">
         <div className="titulo">
@@ -65,7 +65,7 @@ export function Register() {
           </button>
         </form>
       </div>
-    </>
+    </div>
   );
 }
 

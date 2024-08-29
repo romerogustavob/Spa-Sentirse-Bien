@@ -54,6 +54,13 @@
   justify-content: center;
   gap: 10%;
 }
+.first .MainButton {
+  width: 180px;
+  padding: 20px 0;
+}
+.first .MainButton:hover {
+  padding: 20px 0;
+}
 .first input {
   width: 180px;
   padding: 20px 0;
@@ -88,10 +95,11 @@
   text-align: justify;
   margin: 0 20px 40px;
 }
-.about .text h3 {
-  margin: 5px 20px;
-  letter-spacing: 5px;
+.about .text h4 {
+  margin: 20px 0 0;
   color: var(--gris);
+  padding: 0 20px;
+  letter-spacing: 4px;
 }
 .about .text h1 {
   margin-bottom: 20px;
@@ -116,41 +124,17 @@
   margin: auto;
   gap: 3%;
 }
-.top .tarjeta {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  text-align: left;
-  width: 21%;
-  margin: 0;
-  border-radius: 8px;
-  background-color: var(--blanco);
-  box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.1);
-  padding: 0 0 30px;
-  overflow: hidden;
-}
-.top h4 {
-  margin: 20px 0 0;
-  color: var(--rosa);
-  padding: 0 20px;
-}
-.top p {
-  padding: 10px 20px 0;
-}
-.top .titulo {
-  letter-spacing: 4px;
-}
 .top h2 {
-  color: var(--gris);
+  color: var(--rosa);
   margin: 5px 15px 40px;
   font-size: 30px;
 }
-.top img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover; /* La imagen llena el contenedor */
+.top h4 {
+  margin: 20px 0 0;
+  color: var(--gris);
+  padding: 0 20px;
+  letter-spacing: 4px;
 }
-
 .top .MainButton {
   display: flex;
   width: 90px;
@@ -158,13 +142,13 @@
 }
 
 .comments-section {
-  margin: 0 10% 120px;
+  margin: 0 5% 130px;
 }
 .comments-section hr {
   color: var(--rosa);
   border-style: solid;
-  margin: 20px auto;
-  max-width: 60%;
+  margin: 30px auto;
+  width: 60%;
 }
 .comments-container {
   margin: auto;
@@ -172,7 +156,7 @@
   border-radius: 25px;
   padding: 40px 30px;
   box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.1);
-  max-width: 60%;
+  max-width: 70%;
 }
 
 .footer {
@@ -237,11 +221,7 @@
   border-style: solid;
   color: var(--negro);
 }
-@media screen and (max-width: 900px) {
-  .top .tarjeta {
-    width: 30%;
-  }
-}
+
 @media screen and (max-width: 760px) {
   .about .text p {
     margin: 0 20px 40px;
@@ -275,19 +255,10 @@
     flex-wrap: wrap;
     gap: 25px 15px;
   }
-  .top .tarjeta {
-    width: 180px;
-  }
-  .top p {
-    padding: 5px 13px 0;
-    font-size: 13px;
-  }
-  .top h4 {
+  .top h4,
+  .about h4 {
     padding: 0px 13px 5px;
     font-size: 13px;
-  }
-  .top img {
-    height: 100px;
   }
   .footer {
     display: grid;
@@ -312,19 +283,9 @@
   .top .container {
     gap: 15px 8px;
   }
-  .top .tarjeta {
-    width: 150px;
-  }
-  .top p {
-    padding: 5px 13px 0;
-    font-size: 11px;
-  }
   .top h4 {
     padding: 5px 13px 0;
     font-size: 13px;
-  }
-  .top img {
-    height: 100px;
   }
 }
 @media screen and (max-width: 330px) {
@@ -332,9 +293,6 @@
     width: 100px;
     padding: 10px 0;
     font-size: 13px;
-  }
-  .top .tarjeta {
-    width: 130px;
   }
   .contact h3 {
     font-size: 15px;

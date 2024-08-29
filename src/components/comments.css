@@ -7,6 +7,9 @@
 .comments label {
   width: 100%;
 }
+.comments label input {
+  width: 100%;
+}
 .comments h1 {
   margin-bottom: 40px;
 }
