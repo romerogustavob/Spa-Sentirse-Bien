@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Login, { Register } from "./pages/Login";
 import Navbar from "./components/Navbar";
 import Services from "./pages/Services";
+import Gallery from "./pages/Gallery";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/registro" element={<Register />} />
         <Route path="/servicios" element={<Services />} />
         <Route path="/turnos" element={<Services />} />
+        <Route path="/galeria" element={<Gallery />} />
       </Routes>
     </>
   );
