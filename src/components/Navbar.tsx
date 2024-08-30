@@ -14,7 +14,7 @@ function Navbar() {
       </div>
       <div className="enlaces">
         <Link to="/">Inicio</Link>
-        <a href="">Galería</a>
+        <Link to="/galeria">Galería</Link>
         <Link to="/servicios">Servicios</Link>
         <Link to="/servicios">Turnos</Link>
         <Link to="/login" className="MainButton">

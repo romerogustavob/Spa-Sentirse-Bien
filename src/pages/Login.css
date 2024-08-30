@@ -1,4 +1,4 @@
-.background-image {
+.ingreso .background-image {
   background-image: url("../assets/Fondo2.jpg");
   background-size: cover;
   background-position: center;
@@ -98,9 +98,7 @@
     box-shadow: none;
   }
   .ingreso .background-image {
-    background-image: none;
-  }
-  body {
     background-color: var(--blanco);
+    background-image: none;
   }
 }

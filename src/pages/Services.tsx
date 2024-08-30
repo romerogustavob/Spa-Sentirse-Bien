@@ -125,9 +125,9 @@ function Services() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <>
+    <div className="servicios-page">
       <div className="background-image" />
-      <div className="servicios-page">
+      <div className="servicios-container">
         <div className="titulo">
           <h1>SERVICIOS</h1>
           <hr />
@@ -139,7 +139,7 @@ function Services() {
           <ServiceSection titulo="Tratamientos Corporales" tarjetas={trataCo} />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -276,7 +276,8 @@
     margin-top: 8px;
     font-size: 50px;
   }
-  .first input {
+  .first input,
+  .first .MainButton {
     width: 130px;
     padding: 15px 0;
   }
@@ -289,7 +290,8 @@
   }
 }
 @media screen and (max-width: 330px) {
-  .first input {
+  .first input,
+  .first .MainButton {
     width: 100px;
     padding: 10px 0;
     font-size: 13px;
