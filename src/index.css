@@ -53,7 +53,7 @@ p {
   color: var(--rosa);
   outline: none;
 }
-input::placeholder {
+.textbox::placeholder {
   color: var(--rosa);
   opacity: 0.6;
 }
@@ -69,6 +69,7 @@ input::placeholder {
   transition: transform 0.3s ease; /* Transición suave */
   opacity: 85%;
   justify-content: center;
+  font-weight: bold;
 }
 .SecondButton {
   padding: 10px;
@@ -80,6 +81,7 @@ input::placeholder {
   color: var(--rosa);
   transition: transform 0.3s ease; /* Transición suave */
   opacity: 85%;
+  font-weight: bold;
 }
 
 .MainButton:hover {

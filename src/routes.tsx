@@ -3,6 +3,7 @@ import { Login, Register } from "./pages/Login";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
+import Turn from "./pages/Turns";
 
 const AppRoutes = () => {
   return (
@@ -11,10 +12,9 @@ const AppRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Register />} />
-        <Route path="/inicio" element={<Home />} />
-        <Route path="/servicios" element={<Services />} />
-        <Route path="/turnos" element={<Services />} />
         <Route path="/galeria" element={<Gallery />} />
+        <Route path="/servicios" element={<Services />} />
+        <Route path="/turnos" element={<Turn />} />
       </Routes>
     </Router>
   );

@@ -21,10 +21,12 @@ function Home() {
               </h1>
             </div>
             <div className="buttons">
-              <Link className="MainButton" to="/servicios">
+              <Link className="MainButton" to="/turnos">
                 Solicitar Turno
               </Link>
-              <input className="SecondButton" type="button" value="Consultas" />
+              <a className="SecondButton" href="#comments">
+                Consultas
+              </a>
             </div>
           </div>
         </section>
@@ -70,7 +72,7 @@ function Home() {
             Ver Más
           </Link>
         </section>
-        <section className="comments-section">
+        <section className="comments-section" id="comments">
           <hr />
           <div className="comments-container">
             <Comments />

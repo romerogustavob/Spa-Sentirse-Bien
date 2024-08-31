@@ -29,7 +29,7 @@
 .servicios-container hr {
   color: var(--rosa);
   border-style: solid;
-  margin: 20px 0;
+  margin: 20px 0 0;
 }
 
 .servicios-types {
@@ -42,6 +42,7 @@
   font-size: 23px;
   color: var(--gris);
   letter-spacing: 1px;
+  margin-top: 2em;
 }
 .services-container {
   display: flex;

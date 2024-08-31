@@ -1,6 +1,6 @@
 import { useLayoutEffect } from "react";
 import Servicio from "../components/servicio";
-import "./services.css";
+import "./Services.css";
 
 type TarjetaProps = {
   img: string;
@@ -21,7 +21,7 @@ const masajes: TarjetaProps[] = [
   },
   {
     img: "src/assets/masaje-piedras.jpeg",
-    titulo: "Masajes con piedras calientes",
+    titulo: "Con piedras calientes",
     texto:
       "Combina el calor de piedras volcánicas con masajes para una relajación profunda.",
   },
@@ -47,7 +47,7 @@ const belleza: TarjetaProps[] = [
   },
   {
     img: "src/assets/manos-y-pies.jpeg",
-    titulo: "Belleza de manos y pies",
+    titulo: "Manos y pies",
     texto:
       "Cuida y embellece tus manos y pies con nuestros tratamientos especializados.",
   },

@@ -61,11 +61,11 @@
 .first .MainButton:hover {
   padding: 20px 0;
 }
-.first input {
+.first .SecondButton {
   width: 180px;
   padding: 20px 0;
 }
-.first input:hover {
+.first .SecondButton:hover {
   padding: 20px 0;
 }
 
@@ -116,7 +116,7 @@
   align-content: center;
   text-align: center;
   justify-content: center;
-  padding: 20px 0 130px;
+  padding: 20px 0 0px;
 }
 .top .container {
   display: flex;
@@ -142,7 +142,8 @@
 }
 
 .comments-section {
-  margin: 0 5% 130px;
+  margin: 0px 5% 130px;
+  padding-top: 130px;
 }
 .comments-section hr {
   color: var(--rosa);
@@ -276,7 +277,7 @@
     margin-top: 8px;
     font-size: 50px;
   }
-  .first input,
+  .first .SecondButton,
   .first .MainButton {
     width: 130px;
     padding: 15px 0;
@@ -290,7 +291,7 @@
   }
 }
 @media screen and (max-width: 330px) {
-  .first input,
+  .first .SecondButton,
   .first .MainButton {
     width: 100px;
     padding: 10px 0;

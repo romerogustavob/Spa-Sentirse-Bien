@@ -16,7 +16,7 @@ function Navbar() {
         <Link to="/">Inicio</Link>
         <Link to="/galeria">Galería</Link>
         <Link to="/servicios">Servicios</Link>
-        <Link to="/servicios">Turnos</Link>
+        <Link to="/turnos">Turnos</Link>
         <Link to="/login" className="MainButton">
           Ingresar
         </Link>

@@ -10,7 +10,7 @@ type Props = {
 export default function Servicio(props: Props) {
   const { img, titulo, texto } = props;
   return (
-    <Link to="/login" className="tarjeta">
+    <Link to="/turnos" className="tarjeta">
       <img src={img} />
       <div>
         <h4>{titulo}</h4>
