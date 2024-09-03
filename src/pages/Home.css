@@ -304,3 +304,10 @@
     font-size: 13px;
   }
 }
+
+#map {  
+  width: 40%;
+  height: 400px;
+  border: 2px solid #abf7b1;
+  border-radius: 18px;
+}

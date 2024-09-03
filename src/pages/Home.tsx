@@ -2,12 +2,14 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import Comments from "../components/comments";
 import Servicio from "../components/servicio";
+import GoogleMap from "../components/googleMap";
 import { useLayoutEffect } from "react";
 
 function Home() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
   return (
     <>
       <main>
@@ -84,7 +86,7 @@ function Home() {
             <h3>CONTÁCTANOS</h3>
             <div className="item">
               <img src="/src/assets/ubicacion.png" alt="Ubicacion" />
-              <p>Av. Rivadavia N°4358. Resistencia, Chaco.</p>
+              <p>ANJ, Saavedra 449, H3500 Resistencia, Provincia del Chaco</p>
             </div>
             <div className="item">
               <img src="/src/assets/gmail.png" alt="Gmail" />
@@ -106,7 +108,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <img className="temp" src="src/assets/temp.png" alt="maps" />
+          <GoogleMap />
         </section>
       </main>
     </>
