@@ -18,6 +18,7 @@ function App() {
           <Route path="/registro" element={<Register />} />
           <Route path="/galeria" element={<Gallery />} />
           <Route path="/servicios" element={<Services />} />
+
           <Route path="/turnos" element={<Turn />} />
         </Routes>
       </PopUpProvider>
