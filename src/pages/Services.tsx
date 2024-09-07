@@ -1,5 +1,6 @@
-import { useLayoutEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import Servicio from "../components/servicio";
+import { TurnPopUp } from "../components/Turno";
 import "./Services.css";
 
 type TarjetaProps = {
@@ -124,6 +125,7 @@ function Services() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className="servicios-page">
       <div className="background-image" />
@@ -139,6 +141,7 @@ function Services() {
           <ServiceSection titulo="Tratamientos Corporales" tarjetas={trataCo} />
         </div>
       </div>
+      <TurnPopUp /> {/* Aquí solo se renderiza una vez */}
     </div>
   );
 }
