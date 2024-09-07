@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import { useLayoutEffect } from "react";
 import Servicio from "../components/servicio";
 import { TurnPopUp } from "../components/Turno";
 import "./Services.css";
