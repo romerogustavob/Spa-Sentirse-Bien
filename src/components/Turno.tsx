@@ -8,7 +8,16 @@ const servicios: string[] = [
   "Con piedras calientes",
   "Circulatorios",
 ];
-const horas: string[] = ["10:00", "11:00", "17:00", "18:00", "19:00"];
+const horas: string[] = [
+  "09:00",
+  "10:00",
+  "11:00",
+  "12:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00",
+];
 
 type Props = {
   titulo: string;

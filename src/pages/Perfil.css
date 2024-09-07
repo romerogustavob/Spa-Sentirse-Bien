@@ -1,0 +1,50 @@
+.perfil-page .background-image {
+  background-image: url("../assets/Fondo2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  filter: blur(4px);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.perfil-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 80vw;
+  padding: 50px 40px;
+  margin: 130px 0 60px;
+  background-color: var(--header);
+  border-radius: 30px;
+}
+.perfil-container .titulo h1 {
+  letter-spacing: 5px;
+}
+
+.perfil-container hr {
+  color: var(--rosa);
+  border-style: solid;
+  margin: 20px 0 0;
+}
+
+.perfil-section h3 {
+  font-size: 23px;
+  color: var(--gris);
+  letter-spacing: 1px;
+  margin-top: 2em;
+}
+
+@media screen and (max-width: 500px) {
+  .perfil-container {
+    margin: 70px 0;
+  }
+  .perfil-page .background-image {
+    background-color: var(--blanco);
+    background-image: none;
+  }
+}

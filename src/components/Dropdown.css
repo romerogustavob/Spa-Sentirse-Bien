@@ -24,6 +24,8 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  max-height: 220px;
+  overflow-y: auto;
 }
 
 /* Estilo de cada elemento del menú desplegable */

@@ -11,7 +11,7 @@
   --blanco: #ffffff;
   --rosa-claro: #fdf4f7;
   --rosa-fuerte: #f8dee7;
-  --header: rgba(255, 255, 255, 0.9);
+  --header: rgba(255, 255, 255, 0.95);
 }
 html {
   scroll-behavior: smooth;
