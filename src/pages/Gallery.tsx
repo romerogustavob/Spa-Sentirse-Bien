@@ -39,7 +39,7 @@ const photos: Media[] = [
   },
 ];
 
-function Gallery() {
+export default function Gallery() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -82,5 +82,3 @@ function Gallery() {
     </div>
   );
 }
-
-export default Gallery;

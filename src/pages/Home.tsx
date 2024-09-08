@@ -16,7 +16,8 @@ function Home() {
   const { openPopUp } = usePopUp();
 
   return (
-    <>
+    <div className="Home-page">
+      <div className="background-image" />
       <main>
         <section className="first">
           <div className="first-content">
@@ -123,7 +124,7 @@ function Home() {
           <GoogleMap />
         </section>
       </main>
-    </>
+    </div>
   );
 }
 

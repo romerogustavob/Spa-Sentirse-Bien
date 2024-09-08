@@ -1,3 +1,18 @@
+.Home-page .background-image {
+  background-image: url("../assets/Fondo2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  filter: blur(4px);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 .first-content {
   margin-top: 80px;
   align-content: center;
@@ -111,7 +126,8 @@
   align-content: center;
   text-align: center;
   justify-content: center;
-  padding: 20px 0 0px;
+  padding: 30px 20px 10px;
+  background-color: var(--contenedor);
 }
 .top .container {
   display: flex;
