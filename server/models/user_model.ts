@@ -1,3 +1,39 @@
+import mongoose from "mongoose";
+
+const userSchema = new mongoose.Schema({
+    username: {
+        type: String,
+        trim: true
+    },
+    email: {
+        type: String,
+        required: true,
+        trim: true,
+        unique: true
+    },
+    password:{
+        type: String,
+        required: true,
+    },
+    names: {
+        type: String,
+    },
+    surnames: {
+        type: String,
+    },
+    sex: {
+        type: Boolean,
+    },
+    isAdmin: {
+        type: Boolean,
+    }
+
+},    {
+    timestamps: true
+})
+
+export default mongoose.model('User', userSchema)
+
 /*export abstract class User {
 
     id: number;
@@ -141,38 +177,3 @@ export class cliente extends User{
         
     }
 }*/
-import mongoose from "mongoose";
-
-const userSchema = new mongoose.Schema({
-    username: {
-        type: String,
-        trim: true
-    },
-    email: {
-        type: String,
-        required: true,
-        trim: true,
-        unique: true
-    },
-    password:{
-        type: String,
-        required: true,
-    },
-    names: {
-        type: String,
-    },
-    surnames: {
-        type: String,
-    },
-    sex: {
-        type: Boolean,
-    },
-    isAdmin: {
-        type: Boolean,
-    }
-
-},    {
-    timestamps: true
-})
-
-export default mongoose.model('User', userSchema)

@@ -43,7 +43,7 @@ export const AuthProvider = ({children}) => {
             if (Array.isArray(error.response.data)) {
                 return setErrors(error.response.data);
             }
-         
+        
             setErrors([error.response.data.message]);
         }
     }

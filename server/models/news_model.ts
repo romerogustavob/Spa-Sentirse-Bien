@@ -1,41 +1,34 @@
-export class News {
-    
-    private id: number;
-    private title: string
-    private description: string
-    private imageUrl?: string
-    private publishedAt: Date
-    private author: string
+import mongoose from "mongoose";
 
-    constructor (id: number, title: string, description: string, publlishedAt: Date, author:string) {
-        this.id = id
-        this.title = title
-        this.description = description
-        this.publishedAt = publlishedAt
-        this.author = author
-    }
+const newsSchema = new mongoose.Schema({
+    title: {
+        type: String,
+        required: true,
+    },
+    description: {
+        type: String,
+        required: true,
+    },
+    imageURL:{
+        type: String,
+    },
+    publishedAt: {
+        type: Date,
+    },
+    author: {
+        type: String,
+    },
 
-    getId () {
-        return this.id
-    }
- 
-    getTitle () {
-        return this.title
-    }
+},    {
+    timestamps: true
+})
 
-    getDescription () {
-        return this.description
-    }
+export default mongoose.model('New', newsSchema)
 
-    getImage () {
-        return this.imageUrl
-    }
-
-    getDate() {
-        return this.publishedAt
-    }
-
-    getAuthor() {
-        return this.author
-    }
-}
+// export class News {
+    //private id: number;
+    //private title: string
+    //private description: string
+    //private imageUrl?: string
+    //private publishedAt: Date
+    //private author: string }
