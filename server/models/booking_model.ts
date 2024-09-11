@@ -1,4 +1,4 @@
-import {Service} from './service_model'
+/*import {Service} from './service_model'
 import {User} from './user_model'
 
 export class Booking {
@@ -13,4 +13,4 @@ export class Booking {
         this.booking_date = booking_date
         this.booked_at = booked_at
     }
-}
+}*/

@@ -1,4 +1,4 @@
-export abstract class User {
+/*export abstract class User {
 
     id: number;
     names: string;
@@ -140,4 +140,33 @@ export class cliente extends User{
     public static GanerarComentario() {
         
     }
-}
+}*/
+import mongoose from "mongoose";
+
+const userSchema = new mongoose.Schema({
+    username: {
+        type: String,
+        trim: true
+    },
+    email: {
+        type: String,
+        required: true,
+        trim: true,
+        unique: true
+    },
+    password:{
+        type: String,
+        required: true,
+    },
+    names: {
+        type: String,
+    },
+    surnames: {
+        type: String,
+    }
+
+},    {
+    timestamps: true
+})
+
+export default mongoose.model('User', userSchema)

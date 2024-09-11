@@ -1,0 +1,7 @@
+# credenciales Backend
+DB_USER=astrid
+DB_PASSWORD=DB123
+MONGO_URI=mongodb+srv://astrid:DB123@spabd.8phrv.mongodb.net/?retryWrites=true&w=majority&appName=SpaBD
+
+# credenciales Frontend
+VITE_API_KEY=AIzaSyDc_A8f8ahCGK6I9S-9eFeqvaWC676pf2I
