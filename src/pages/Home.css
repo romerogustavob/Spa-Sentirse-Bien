@@ -69,14 +69,13 @@
   justify-content: center;
   gap: 10%;
 }
-.first .buttonsFirst .MainButton,
-.first .buttonsFirst .SecondButton {
+.first .buttonsFirst button {
   width: 150px;
   padding: 15px 0;
 }
-.first .buttonsFirst .MainButton:hover,
-.first .buttonsFirst .SecondButton:hover {
-  padding: 15px 0;
+.first .buttonsFirst a {
+  align-content: center;
+  display: none;
 }
 
 .about {

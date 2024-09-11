@@ -7,7 +7,7 @@
   border-radius: 8px;
   background-color: var(--blanco);
   box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.1);
-  padding: 0 0 30px;
+  padding: 0 0 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
   cursor: pointer;
@@ -17,7 +17,7 @@
   box-shadow: 5px 5px 25px 2px rgba(0, 0, 0, 0.2); /* Más sombra durante el hover */
 }
 
-.tarjeta h4 {
+.tarjeta .titulo {
   margin: 20px 0 0;
   color: var(--rosa);
   padding: 0 20px;
@@ -32,6 +32,12 @@
   height: 200px;
   width: 100%;
   object-fit: cover; /* La imagen llena el contenedor */
+}
+.tarjeta .SecondButton {
+  margin: 15px auto 10px;
+  text-align: center;
+  width: 50px;
+  padding: 5px 10px;
 }
 @media screen and (max-width: 900px) {
   .tarjeta {

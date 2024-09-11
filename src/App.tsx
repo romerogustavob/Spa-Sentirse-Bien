@@ -7,6 +7,7 @@ import Gallery from "./pages/Gallery";
 import Turn from "./pages/Turns";
 import Perfil from "./pages/Perfil";
 import { PopUpProvider } from "./components/PopUpContext";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/servicios" element={<Services />} />
           <Route path="/turnos" element={<Turn />} />
           <Route path="/perfil" element={<Perfil />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </PopUpProvider>
     </>

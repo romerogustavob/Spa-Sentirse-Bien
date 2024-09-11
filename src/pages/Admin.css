@@ -1,0 +1,138 @@
+.admin-page .background-image {
+  background-image: url("../assets/Fondo2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  filter: blur(4px);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 80vw;
+  padding: 50px 40px;
+  margin: 130px 0 60px;
+  background-color: var(--contenedor);
+  border-radius: 30px;
+}
+.admin-container .titulo h1 {
+  letter-spacing: 5px;
+}
+
+.admin-container hr {
+  color: var(--rosa);
+  border-style: solid;
+  margin: 20px 0 0;
+  margin-bottom: 23px;
+}
+
+.admin-types {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.admin-types .gallery-section h3 {
+  font-size: 23px;
+  color: var(--gris);
+  letter-spacing: 1px;
+  margin-top: 1em;
+}
+
+.admin-page .element-container {
+  display: flex;
+  gap: 10px;
+  padding: 0 0 15px 0;
+  margin-bottom: -25px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: auto;
+}
+
+.admin-page .element {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0 0 15px;
+  width: 150px;
+  margin: 0;
+  border-radius: 8px;
+  background-color: var(--blanco);
+  box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  justify-content: space-between;
+}
+.admin-page .element-photo {
+  display: flex;
+  flex-direction: column;
+}
+.admin-page .element-img {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 150px;
+  margin: 0;
+  border-radius: 8px;
+  background-color: var(--blanco);
+  box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.admin-page .element h4 {
+  margin: 20px 0 0;
+  color: var(--rosa);
+  padding: 0px 13px 5px;
+  font-size: 13px;
+}
+.admin-page .element p {
+  padding: 5px 13px 0;
+  font-size: 13px;
+  color: var(--gris);
+}
+.admin-page .element img {
+  height: 100px;
+  width: 100%;
+  object-fit: cover; /* La imagen llena el contenedor */
+}
+.admin-page .element-img img {
+  height: 100px;
+  width: 100%;
+  object-fit: cover;
+}
+.admin-page .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 30px;
+}
+.admin-page .buttons .par {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Botón de eliminar */
+.delete {
+  background-color: rgba(255, 0, 0, 0.7);
+  border: none;
+  color: white;
+  font-size: 10px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 50px;
+  margin: 10px auto 0px;
+}
+
+.delete:hover {
+  background-color: rgba(255, 0, 0, 1);
+}

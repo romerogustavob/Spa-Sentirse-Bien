@@ -38,6 +38,9 @@ function Home() {
               >
                 Contactanos
               </button>
+              <Link to="/admin" className="SecondButton">
+                Administrador
+              </Link>
             </div>
           </div>
           <TurnPopUp />
@@ -68,17 +71,20 @@ function Home() {
               img="src/assets/masaje-antiestres.jpg"
               titulo="Masajes Antiestrés"
               texto="Relaja cuerpo y mente, aliviando tensión muscular y estrés."
+              precio={5000}
             />
             <Servicio
               img="src/assets/Limpieza.jpg"
               titulo="Limpieza profunda + Hidratación"
               texto="Limpia y rehidrata la piel, dejándola fresca y luminosa."
+              precio={5000}
             />
             <Servicio
               img="src/assets/Velaslim.jpg"
               titulo="VelaSlim"
               texto="Eliminación de la grasa en zonas como abdomen, cintura,
                   muslos, brazos y glúteos."
+              precio={5000}
             />
           </div>
           <div className="button">
