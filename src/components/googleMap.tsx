@@ -1,5 +1,9 @@
 import { useEffect } from "react";
 
+
+
+const API_KEY = import.meta.env.VITE_API_KEY;
+
 declare global {
     interface Window {
     google: typeof google;
@@ -9,9 +13,9 @@ declare global {
 const GoogleMap = () => {
     useEffect(() => {
     const initMap = () => {
-      const location = { lat: -27.449911149532912, lng: -58.97721869777109 }; // Coordenadas exactas
+        const location = { lat: -27.449911149532912, lng: -58.97721869777109 };   
         const map = new window.google.maps.Map(document.getElementById("map") as HTMLElement, {
-        zoom: 15,
+        zoom: 16,
         center: location,
         });
         new window.google.maps.Marker({
@@ -24,7 +28,7 @@ const GoogleMap = () => {
         initMap();
     } else {
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDc_A8f8ahCGK6I9S-9eFeqvaWC676pf2I&callback=initMap`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap`;
     script.async = true;
     script.defer = true;
     document.body.appendChild(script);
