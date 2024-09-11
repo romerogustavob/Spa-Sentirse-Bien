@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import Turn from "./pages/Turns";
+import Perfil from "./pages/Perfil";
 
 const AppRoutes = () => {
   return (
@@ -15,6 +16,7 @@ const AppRoutes = () => {
         <Route path="/galeria" element={<Gallery />} />
         <Route path="/servicios" element={<Services />} />
         <Route path="/turnos" element={<Turn />} />
+        <Route path="/perfil" element={<Perfil />} />
       </Routes>
     </Router>
   );

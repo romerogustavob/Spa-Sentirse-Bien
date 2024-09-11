@@ -5,19 +5,24 @@ import Navbar from "./components/Navbar";
 import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import Turn from "./pages/Turns";
+import Perfil from "./pages/Perfil";
+import { PopUpProvider } from "./components/PopUpContext";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/registro" element={<Register />} />
-        <Route path="/galeria" element={<Gallery />} />
-        <Route path="/servicios" element={<Services />} />
-        <Route path="/turnos" element={<Turn />} />
-      </Routes>
+      <PopUpProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/registro" element={<Register />} />
+          <Route path="/galeria" element={<Gallery />} />
+          <Route path="/servicios" element={<Services />} />
+          <Route path="/turnos" element={<Turn />} />
+          <Route path="/perfil" element={<Perfil />} />
+        </Routes>
+      </PopUpProvider>
     </>
   );
 }

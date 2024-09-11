@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import "./Gallery.css";
 
 type Media = {
@@ -39,10 +39,21 @@ const photos: Media[] = [
   },
 ];
 
-function Gallery() {
+export default function Gallery() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const handleImageClick = (img: string) => {
+    setSelectedImage(img);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <div className="gallery-page">
       <div className="background-image" />
@@ -72,15 +83,29 @@ function Gallery() {
             <div className="element-container">
               {photos.map((element, index) => (
                 <div className="element-img" key={index}>
-                  <img src={element.img} />
+                  <img
+                    src={element.img}
+                    alt="gallery"
+                    onClick={() => handleImageClick(element.img)}
+                  />
                 </div>
               ))}
             </div>
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {selectedImage && (
+        <div className="modal" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <span className="close" onClick={closeModal}>
+              &times;
+            </span>
+            <img src={selectedImage} alt="Modal" className="modal-image" />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
-
-export default Gallery;

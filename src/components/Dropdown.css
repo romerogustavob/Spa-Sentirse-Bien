@@ -24,6 +24,8 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  max-height: 220px;
+  overflow-y: auto;
 }
 
 /* Estilo de cada elemento del menú desplegable */
@@ -41,4 +43,13 @@
 /* Eliminar el borde inferior del último elemento */
 .dropdown-item:last-child {
   border-bottom: none;
+}
+
+@media screen and (max-width: 500px) {
+  .dropdown .SecondButton {
+    margin-top: 0;
+    width: 160px;
+    font-size: 14px;
+    padding: 10px;
+  }
 }

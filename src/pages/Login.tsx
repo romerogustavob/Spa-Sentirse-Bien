@@ -1,5 +1,6 @@
 import "./Login.css";
 import { Link } from "react-router-dom";
+//import { useAuth } from "../context/AuthContext.jsx"
 
 export function Login() {
   return (
@@ -48,6 +49,10 @@ export function Register() {
         </p>
         <form>
           <label>
+            <p>Nombre Completo</p>
+            <input className="textbox" type="text" name="FullName"></input>
+          </label>
+          <label>
             <p>Correo electrónico</p>
             <input className="textbox" type="email" name="email"></input>
           </label>
@@ -56,7 +61,7 @@ export function Register() {
             <input className="textbox" type="password" name="password" />
           </label>
           <label>
-            <p>Repite la contraseña</p>
+            <p>Confirmar contraseña</p>
             <input className="textbox" type="password" name="password2" />
           </label>
           <p className="MensajeError">* Correo ya en uso.</p>

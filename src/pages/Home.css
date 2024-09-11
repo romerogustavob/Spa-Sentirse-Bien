@@ -1,3 +1,18 @@
+.Home-page .background-image {
+  background-image: url("../assets/Fondo2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  filter: blur(4px);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 .first-content {
   margin-top: 80px;
   align-content: center;
@@ -27,7 +42,7 @@
   z-index: -1; /* Coloca el pseudo-elemento detrás del contenido de .first */
 }
 
-.first div {
+.first .text {
   text-align: center;
 }
 .first h2,
@@ -48,25 +63,20 @@
   font-size: 80px;
 }
 
-.first .buttons {
+.first .buttonsFirst {
   margin-top: 50px;
   display: flex;
   justify-content: center;
   gap: 10%;
 }
-.first .MainButton {
-  width: 180px;
-  padding: 20px 0;
+.first .buttonsFirst .MainButton,
+.first .buttonsFirst .SecondButton {
+  width: 150px;
+  padding: 15px 0;
 }
-.first .MainButton:hover {
-  padding: 20px 0;
-}
-.first .SecondButton {
-  width: 180px;
-  padding: 20px 0;
-}
-.first .SecondButton:hover {
-  padding: 20px 0;
+.first .buttonsFirst .MainButton:hover,
+.first .buttonsFirst .SecondButton:hover {
+  padding: 15px 0;
 }
 
 .about {
@@ -116,7 +126,8 @@
   align-content: center;
   text-align: center;
   justify-content: center;
-  padding: 20px 0 0px;
+  padding: 30px 20px 10px;
+  background-color: var(--contenedor);
 }
 .top .container {
   display: flex;
@@ -124,18 +135,18 @@
   margin: auto;
   gap: 3%;
 }
-.top h2 {
+.top .tituloh2 {
   color: var(--rosa);
   margin: 5px 15px 40px;
   font-size: 30px;
 }
-.top h4 {
+.top .tituloh1 {
   margin: 20px 0 0;
   color: var(--gris);
   padding: 0 20px;
   letter-spacing: 4px;
 }
-.top .MainButton {
+.top .button .MainButton {
   display: flex;
   width: 90px;
   margin: 25px auto;
@@ -143,7 +154,7 @@
 
 .comments-section {
   margin: 0px 5% 130px;
-  padding-top: 130px;
+  padding-top: 80px;
 }
 .comments-section hr {
   color: var(--rosa);
@@ -223,7 +234,7 @@
   color: var(--negro);
 }
 
-#map {  
+#map {
   display: flex;
   width: 60%;
   max-width: 350px;
@@ -241,7 +252,7 @@
   .about .text h1 {
     font-size: 30px;
   }
-  #map {	
+  #map {
     margin: auto;
   }
 }

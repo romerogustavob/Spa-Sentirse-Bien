@@ -4,14 +4,20 @@ import Comments from "../components/comments";
 import Servicio from "../components/servicio";
 import GoogleMap from "../components/googleMap";
 import { useLayoutEffect } from "react";
+import { TurnPopUp } from "../components/Turno";
+import { FormPopUp } from "../components/FormPopUp";
+import { usePopUp } from "../components/PopUpContext";
 
 function Home() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
+  const { openPopUp } = usePopUp();
+
   return (
-    <>
+    <div className="Home-page">
+      <div className="background-image" />
       <main>
         <section className="first">
           <div className="first-content">
@@ -22,15 +28,20 @@ function Home() {
                 <p className="MarcaName"> Sentirse bien</p>
               </h1>
             </div>
-            <div className="buttons">
-              <Link className="MainButton" to="/turnos">
-                Solicitar Turno
-              </Link>
-              <a className="SecondButton" href="#comments">
-                Consultas
-              </a>
+            <div className="buttonsFirst">
+              <button className="MainButton" onClick={() => openPopUp("turn")}>
+                Agendar Turno
+              </button>
+              <button
+                className="SecondButton"
+                onClick={() => openPopUp("form")}
+              >
+                Contactanos
+              </button>
             </div>
           </div>
+          <TurnPopUp />
+          <FormPopUp />
         </section>
         <section className="about">
           <img src="/src/assets/imagen1.jpg" alt="imagen1" />
@@ -50,8 +61,8 @@ function Home() {
           </div>
         </section>
         <section className="top">
-          <h4 className="titulo">NUESTRO TOP</h4>
-          <h2>Los Servicios Más Populares</h2>
+          <h4 className="tituloh1">NUESTRO TOP</h4>
+          <h2 className="tituloh2">Los Servicios Más Populares</h2>
           <div className="container">
             <Servicio
               img="src/assets/masaje-antiestres.jpg"
@@ -70,9 +81,11 @@ function Home() {
                   muslos, brazos y glúteos."
             />
           </div>
-          <Link to="/servicios" className="MainButton">
-            Ver Más
-          </Link>
+          <div className="button">
+            <Link to="/servicios" className="MainButton">
+              Ver Más
+            </Link>
+          </div>
         </section>
         <section className="comments-section" id="comments">
           <hr />
@@ -111,7 +124,7 @@ function Home() {
           <GoogleMap />
         </section>
       </main>
-    </>
+    </div>
   );
 }
 

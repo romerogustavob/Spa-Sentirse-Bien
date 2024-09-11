@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import "./servicio.css";
+import { usePopUp } from "./PopUpContext";
 
 type Props = {
   img: string;
@@ -8,14 +8,16 @@ type Props = {
 };
 
 export default function Servicio(props: Props) {
+  const { openPopUp } = usePopUp();
   const { img, titulo, texto } = props;
+
   return (
-    <Link to="/turnos" className="tarjeta">
+    <div className="tarjeta" onClick={() => openPopUp("turn")}>
       <img src={img} />
       <div>
         <h4>{titulo}</h4>
         <p>{texto}</p>
       </div>
-    </Link>
+    </div>
   );
 }

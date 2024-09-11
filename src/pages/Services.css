@@ -19,7 +19,7 @@
   width: 80vw;
   padding: 50px 40px;
   margin: 130px 0 60px;
-  background-color: var(--header);
+  background-color: var(--contenedor);
   border-radius: 30px;
 }
 .servicios-container .titulo h1 {
@@ -55,10 +55,8 @@
 
 @media screen and (max-width: 500px) {
   .servicios-container {
-    margin: 70px 0;
-  }
-  .servicios-page .background-image {
-    background-color: var(--blanco);
-    background-image: none;
+    margin: 0px 0;
+    border-radius: 0px;
+    padding-top: 80px;
   }
 }

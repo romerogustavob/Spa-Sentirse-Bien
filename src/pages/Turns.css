@@ -15,11 +15,10 @@
 .turn-container {
   display: flex;
   flex-direction: column;
-  justify-content: left;
   width: 80vw;
-  padding: 50px 40px;
-  margin: 130px 0 60px;
-  background-color: var(--header);
+  padding: 50px 40px 35px;
+  margin: 130px 0 30px;
+  background-color: var(--contenedor);
   border-radius: 30px;
 }
 .turn-container .titulo h1 {
@@ -60,7 +59,7 @@ hr {
   word-wrap: break-word; /* Rompe palabras largas para ajustarlas al contenedor */
   overflow-wrap: break-word;
 }
-.turn-page .MainButton {
+.newTurnButton .MainButton {
   display: flex;
   margin: auto;
 }
@@ -95,7 +94,9 @@ hr {
 }
 @media screen and (max-width: 500px) {
   .turn-container {
-    margin: 70px 0;
+    margin: 0px 0;
+    border-radius: 0px;
+    padding-top: 80px;
   }
   .turno {
     padding: 6px;
@@ -107,16 +108,11 @@ hr {
     font-size: 13px;
   }
   .misTurnos-container .SecondButton {
-    font-size: 10px;
+    font-size: 9.5px;
     padding: 5px 5px;
     display: flex;
     margin: auto;
-    overflow: hidden;
     width: 44px;
-  }
-  .turn-page .background-image {
-    background-color: var(--blanco);
-    background-image: none;
   }
 }
 @media screen and (max-width: 385px) {
@@ -126,95 +122,4 @@ hr {
   .turno h4 {
     font-size: 11px;
   }
-}
-
-.turno-component {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 50px auto;
-}
-
-.turno-component .icon {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.turno-component .icon img {
-  width: auto;
-  height: 25px;
-  margin: 0 10px 5px;
-}
-
-.turno-component .icon h1 {
-  font-size: 26px;
-  margin-bottom: 10px;
-  letter-spacing: 3px;
-}
-
-.turno-component p {
-  opacity: 0.6;
-  margin: 0 0 0px 10px;
-}
-
-.turno-component h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: var(--gris);
-  letter-spacing: 1px;
-}
-
-.turno-component .Contenedor-dropdowns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 20px;
-  justify-content: space-between;
-}
-
-.turno-component .box {
-  flex: 1 1 calc(50% - 20px);
-}
-
-.turno-component .box h4 {
-  font-size: 16px;
-  margin-bottom: 5px;
-  color: var(--gris);
-}
-
-.turno-component .box input[type="date"] {
-  padding: 8px;
-  border: 2px solid var(--rosa-fuerte);
-  border-radius: 4px;
-  font-size: 14px;
-  color: var(--rosa);
-  background-color: var(--rosa-claro);
-  font-weight: bold;
-}
-
-.turno-component .detalles h4 {
-  font-size: 16px;
-  margin-bottom: 5px;
-  color: var(--gris);
-}
-
-.turno-component .detalles .textbox {
-  height: auto;
-  min-height: 50px;
-  max-height: 150px;
-  min-width: 85%;
-  max-width: 85%;
-  padding: 8px;
-  border: 2px solid var(--rosa-fuerte);
-  border-radius: 5px;
-  font-size: 13px;
-}
-
-.turno-component .MainButton {
-  margin: 30px auto 10px;
-  padding: 10px 15px;
-  font-size: 16px;
 }
