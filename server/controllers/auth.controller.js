@@ -22,9 +22,9 @@ export const register = async (req, res) => {
         res.json({
             id: userSaved._id,
             username: userSaved.username,
-           email: userSaved.email,
-           createdAt: userSaved.createdAt,
-           updatedAt: userSaved.updatedAt
+            email: userSaved.email,
+            createdAt: userSaved.createdAt,
+            updatedAt: userSaved.updatedAt
         })
     }
     catch (error) {
@@ -50,9 +50,9 @@ export const login = async (req, res) => {
         res.json({
             id: userFound._id,
             username: userFound.username,
-           email: userFound.email,
-           createdAt: userFound.createdAt,
-           updatedAt: userFound.updatedAt
+            email: userFound.email,
+            createdAt: userFound.createdAt,
+            updatedAt: userFound.updatedAt
         })
     }
     catch (error) {

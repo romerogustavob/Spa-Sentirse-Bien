@@ -1,1 +1,0 @@
-export const TOKEN_SECRET = 'Token secreto, actualizar después'

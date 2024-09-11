@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 
-
-
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 declare global {
