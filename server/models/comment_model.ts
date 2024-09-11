@@ -1,30 +1,17 @@
-export class Comment {
+import mongoose from "mongoose";
 
-    private id: number
-    private author: string
-    private text: string
-    private publishedAt: Date
-
-    constructor (id: number, author: string, text: string, publishedAt: Date) {
-        this.id = id
-        this.author = author
-        this.text = text
-        this.publishedAt = publishedAt
+const commentSchema = new mongoose.Schema({
+    author: {
+        type: String,
+        trim: true,
+    },
+    content: {
+        type: String,
+        required: true,
+        trim: true
     }
+},    {
+    timestamps: true
+})
 
-    getId () {
-        return this.id
-    }
-
-    getAuthor () {
-        return this.author
-    }
-
-    getText () {
-        return this.text
-    }
-
-    getDate () {
-        return this.publishedAt
-    }
-}
+export default mongoose.model('User', commentSchema)

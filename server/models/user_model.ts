@@ -163,6 +163,12 @@ const userSchema = new mongoose.Schema({
     },
     surnames: {
         type: String,
+    },
+    sex: {
+        type: Boolean,
+    },
+    isAdmin: {
+        type: Boolean,
     }
 
 },    {
