@@ -1,12 +1,4 @@
-import { Schema, model, Document } from 'mongoose';
-
-export interface IUser extends Document {
-    username: string;
-    email: string;
-    password: string;
-    createdAt: Date;
-    updatedAt: Date;
-}
+import { Schema, model } from 'mongoose';
 
 const userSchema = new Schema({
     username: {
@@ -40,7 +32,7 @@ const userSchema = new Schema({
     timestamps: true
 })
 
-export default model<IUser>('User', userSchema)
+export default model('User', userSchema)
 
 /*export abstract class User {
 
