@@ -63,9 +63,16 @@ export default function Admin() {
     window.scrollTo(0, 0);
   }, []);
 
-  const [item, setItem] = useState("");
+  const [titulo, setTitulo] = useState("");
+  const [text, setText] = useState("");
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
-    setItem(event.target.value);
+    const { name, value } = event.target;
+
+    if (name === "titulo") {
+      setTitulo(value);
+    } else if (name === "text") {
+      setText(value);
+    }
   }
 
   return (
@@ -96,17 +103,17 @@ export default function Admin() {
               <div className="par">
                 <input
                   className="textbox"
-                  id="item"
+                  name="titulo"
                   type="text"
-                  value={item}
+                  value={titulo}
                   onChange={handleChange}
                   placeholder="Titulo"
                 />
                 <input
                   className="textbox"
-                  id="item"
+                  name="text"
                   type="text"
-                  value={item}
+                  value={text}
                   onChange={handleChange}
                   placeholder="Descripcion"
                 />
