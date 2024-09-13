@@ -127,6 +127,8 @@ export default function Comments() {
                 )}
               </>
             )}
+            {/* Botón de borrar siempre visible */}
+            <button className="delete">Borrar</button>
           </li>
         ))}
       </ul>
