@@ -43,6 +43,7 @@ p {
   margin: 0;
 }
 .textbox {
+  font-family: Arial, sans-serif;
   padding: 10px 10px;
   border-style: solid;
   border-color: var(--rosa-fuerte); /* Color del borde */
@@ -58,7 +59,6 @@ p {
   color: var(--rosa);
   opacity: 0.6;
 }
-
 .MainButton {
   padding: 10px;
   border: none;
@@ -84,6 +84,18 @@ p {
   opacity: 85%;
   font-weight: bold;
 }
+/* Botón de eliminar */
+.delete {
+  background-color: rgba(255, 0, 0, 0.7);
+  border: none;
+  color: white;
+  font-size: 10px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 50px;
+  margin: 10px auto 0px;
+}
 
 .MainButton:hover {
   transform: scale(1.05);
@@ -92,6 +104,10 @@ p {
 .SecondButton:hover {
   transform: scale(1.05);
   opacity: 95%;
+}
+.delete:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 0, 0, 1);
 }
 
 .MensajeError {

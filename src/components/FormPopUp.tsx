@@ -1,38 +1,58 @@
 import React, { useState } from "react";
 import { usePopUp } from "../components/PopUpContext";
 import "./FormPopUp.css";
+import emailjs from "@emailjs/browser";
 
 export function FormPopUp() {
-  const { activePopUp, closePopUp } = usePopUp();
-  const [formData, setFormData] = useState({
-    nombre: "",
+  // Estado inicial para el formulario
+  const frmContact = {
+    user_name: "",
     email: "",
-    mensaje: "",
-  });
+    message: "",
+    reply_to: "",
+  };
 
+  const { activePopUp, closePopUp } = usePopUp();
+  const [contact, setContact] = useState(frmContact);
+
+  // Manejador para cambios en los campos del formulario
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setContact({ ...contact, [e.target.name]: e.target.value });
   };
 
+  // Manejador para el envío del formulario
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Simular el envío de correo
-    const { nombre, email, mensaje } = formData;
-    const destinatario = "contacto@ejemplo.com"; // Destinatario fijo
-    const asunto = `Nueva consulta de ${nombre}`;
-    const cuerpoMensaje = `Nombre: ${nombre}\nEmail: ${email}\nMensaje: ${mensaje}`;
+    // Correo del usuario predefinido (puedes cambiarlo cuando tengas login implementado)
+    contact.email = "usuario@example.com";
+    contact.reply_to = contact.email;
 
-    // Aquí podrías agregar la lógica para enviar el correo
-    alert(
-      `Correo enviado a ${destinatario}\nAsunto: ${asunto}\nMensaje: ${cuerpoMensaje}`
-    );
+    // Llamada a emailjs para enviar el correo
+    emailjs
+      .send("service_tm8ntjv", "template_ssqskz4", contact, "vpN5u16jjxNL3dRm1")
+      .then(
+        (response) => {
+          console.log("Success", response.status, response.text);
 
-    closePopUp(); // Cerrar el pop-up después del envío
+          // Limpiar el formulario
+          setContact(frmContact);
+
+          // Mostrar alerta de éxito
+          alert("Correo enviado exitosamente.");
+        },
+        (err) => {
+          console.log("Error", err);
+          alert("Hubo un error al enviar el correo.");
+        }
+      );
+
+    closePopUp(); // Cerrar el popup después del envío
   };
 
+  // Si el popup no está activo, no renderiza el formulario
   if (activePopUp !== "form") return null;
 
   return (
@@ -40,10 +60,10 @@ export function FormPopUp() {
       <div className="popup-overlay">
         <div className="form-component-content">
           <div className="icon">
-            <img src="./src/assets/gmail2.png" />
+            <img src="./src/assets/gmail2.png" alt="Gmail icon" />
             <h1>ENVIANOS UN CORREO</h1>
           </div>
-          <p>Completa el siguiente formulario para reservar tu turno</p>
+          <p>Completa el siguiente formulario para enviarnos tu consulta</p>
           <hr />
           <br />
           <form onSubmit={handleSubmit}>
@@ -52,21 +72,9 @@ export function FormPopUp() {
               <input
                 type="text"
                 id="nombre"
-                name="nombre"
+                name="user_name"
                 className="textbox"
-                value={formData.nombre}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Correo Electrónico</label>
-              <input
-                type="email"
-                id="email"
-                className="textbox"
-                name="email"
-                value={formData.email}
+                value={contact.user_name}
                 onChange={handleChange}
                 required
               />
@@ -76,8 +84,8 @@ export function FormPopUp() {
               <textarea
                 id="mensaje"
                 className="textbox"
-                name="mensaje"
-                value={formData.mensaje}
+                name="message"
+                value={contact.message}
                 onChange={handleChange}
                 required
               />
