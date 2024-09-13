@@ -20,5 +20,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "server/controllers", "server/models", "server/DB"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

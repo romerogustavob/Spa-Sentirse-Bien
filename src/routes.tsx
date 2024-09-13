@@ -5,7 +5,7 @@ import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import Turn from "./pages/Turns";
 import Perfil from "./pages/Perfil";
-import Admin from "./pages/Admin";
+import Admin from "./pages/Admin.tsx";
 
 const AppRoutes = () => {
   return (

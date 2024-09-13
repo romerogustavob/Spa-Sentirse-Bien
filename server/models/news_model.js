@@ -14,6 +14,7 @@ const newsSchema = new mongoose.Schema({
     },
     publishedAt: {
         type: Date,
+        default: Date.now
     },
     author: {
         type: String,
@@ -24,11 +25,3 @@ const newsSchema = new mongoose.Schema({
 })
 
 export default mongoose.model('New', newsSchema)
-
-// export class News {
-    //private id: number;
-    //private title: string
-    //private description: string
-    //private imageUrl?: string
-    //private publishedAt: Date
-    //private author: string }
