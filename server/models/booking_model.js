@@ -17,6 +17,11 @@ const bookingSchema = new mongoose.Schema({
     },
     info: {
         type: String,
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        require: true
     }
 },    {
     timestamps: true
