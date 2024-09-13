@@ -73,7 +73,7 @@ export function TurnPopUp() {
                   type="date"
                   name="fecha"
                   id="fecha"
-                  value="Ingresar Fecha"
+                  placeholder="Ingresar Fecha"
                 />
               </div>
               <Box titulo="Hora" label="Seleccione Horario" options={horas} />
