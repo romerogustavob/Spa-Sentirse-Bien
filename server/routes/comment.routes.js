@@ -7,7 +7,7 @@ import { createCommentSchema } from "../Schemas/comment.schema.js";
 const router = Router()
 
 router.post('/comment',validateSchema(createCommentSchema),createComment);
-router.delete('/comment/:id',authRequired, deleteComment)
-router.get('/comment', getComments)
+router.delete('/comment/:id',authRequired, deleteComment);
+router.get('/comment', getComments);
 
 export default router
