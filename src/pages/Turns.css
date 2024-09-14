@@ -17,7 +17,7 @@
   flex-direction: column;
   width: 80vw;
   padding: 50px 40px 35px;
-  margin: 130px 0 30px;
+  margin: 130px 0 100px;
   background-color: var(--contenedor);
   border-radius: 30px;
 }

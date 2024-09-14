@@ -27,10 +27,9 @@ export function FormPopUp() {
     e.preventDefault();
 
     // Correo del usuario predefinido (puedes cambiarlo cuando tengas login implementado)
-    contact.email = "usuario@example.com";
     contact.reply_to = contact.email;
 
-    // Llamada a emailjs para enviar el correo
+    // Llamada a emailjs para enviar el correo al remitente
     emailjs
       .send("service_tm8ntjv", "template_ssqskz4", contact, "vpN5u16jjxNL3dRm1")
       .then(
@@ -48,6 +47,14 @@ export function FormPopUp() {
           alert("Hubo un error al enviar el correo.");
         }
       );
+
+    // Llamada a emailjs para enviar el correo al emisor
+    emailjs.send(
+      "service_tm8ntjv",
+      "template_kt60dsb",
+      contact,
+      "vpN5u16jjxNL3dRm1"
+    );
 
     closePopUp(); // Cerrar el popup después del envío
   };
@@ -75,6 +82,18 @@ export function FormPopUp() {
                 name="user_name"
                 className="textbox"
                 value={contact.user_name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="nombre">Email</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                className="textbox"
+                value={contact.email}
                 onChange={handleChange}
                 required
               />

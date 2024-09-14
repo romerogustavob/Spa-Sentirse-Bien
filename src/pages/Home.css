@@ -152,7 +152,7 @@
 }
 
 .comments-section {
-  margin: 0px 5% 130px;
+  margin: 30px 5% 150px;
   padding-top: 80px;
 }
 .comments-section hr {
@@ -168,79 +168,6 @@
   padding: 40px 30px;
   box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.1);
   max-width: 70%;
-}
-
-.footer {
-  background-color: var(--gris);
-  padding: 50px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.contact h3 {
-  color: var(--blanco);
-  letter-spacing: 4px;
-  margin-top: 0px;
-  margin-bottom: 30px;
-}
-.itemEmpleo h3 {
-  margin-top: 50px;
-  margin-bottom: 30px;
-}
-.contact .item {
-  margin-bottom: 15px;
-  display: flex;
-  gap: 5px;
-}
-.contact .item p {
-  color: var(--gris-claro);
-  text-align: left;
-}
-.contact .item img {
-  height: 20px;
-  width: auto;
-}
-.footer .temp {
-  height: 250px;
-  width: fit-content;
-}
-.archivo {
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-  gap: 10px;
-}
-.archivo input {
-  background-color: var(--gris);
-  border-color: var(--gris-claro);
-  border-style: solid;
-  color: var(--blanco);
-  border-width: 2px;
-  padding: 3px;
-  border-radius: 5px;
-}
-.archivo .submit {
-  background-color: var(--gris);
-  border-color: var(--gris-claro);
-  border-style: solid;
-  color: var(--blanco);
-  width: 50%;
-}
-.archivo .submit:hover {
-  background-color: var(--gris-claro);
-  border-color: var(--gris-claro);
-  border-style: solid;
-  color: var(--negro);
-}
-
-#map {
-  display: flex;
-  width: 60%;
-  max-width: 350px;
-  aspect-ratio: 1;
-  border: 2px solid #f7f7f7;
-  border-radius: 18px;
-  margin: 0;
 }
 
 @media screen and (max-width: 760px) {

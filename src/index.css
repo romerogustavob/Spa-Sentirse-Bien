@@ -13,6 +13,7 @@
   --rosa-fuerte: #f8dee7;
   --header: rgba(255, 255, 255, 0.95);
   --contenedor: rgba(255, 255, 255, 0.8);
+  --footer: #1b2b19de;
 }
 html {
   scroll-behavior: smooth;

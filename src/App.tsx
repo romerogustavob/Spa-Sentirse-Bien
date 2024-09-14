@@ -8,6 +8,7 @@ import Turn from "./pages/Turns";
 import Perfil from "./pages/Perfil";
 import { PopUpProvider } from "./components/PopUpContext";
 import Admin from "./pages/Admin";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/perfil" element={<Perfil />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
+        <Footer />
       </PopUpProvider>
     </>
   );
