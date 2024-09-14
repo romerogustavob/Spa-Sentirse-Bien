@@ -36,6 +36,12 @@ const news: Media[] = [
     texto:
       "Prueba noticia 2 Prueba noticia 2 Prueba noticia 2 Prueba noticia 2 Prueba noticia 2",
   },
+  {
+    img: "src/assets/noticia1.jpeg",
+    titulo: "Titulo noticia 2",
+    texto:
+      "Prueba noticia 2 Prueba noticia 2 Prueba noticia 2 Prueba noticia 2 Prueba noticia 2",
+  },
 ];
 const photos: Media[] = [
   {
@@ -62,12 +68,36 @@ type Turno = {
   usuario: string;
   servicio: string;
   tipo: string;
+  hora: string;
 };
-const turno: Turno = {
-  usuario: "JulianCodina",
-  servicio: "Antiestres",
-  tipo: "Masaje",
-};
+const turnos: Turno[] = [
+  {
+    usuario: "JulianCodina",
+    servicio: "Antiestres",
+    tipo: "Masaje",
+    hora: "13:00",
+  },
+  {
+    usuario: "AstridPuta",
+    servicio: "Descontracturante",
+    tipo: "Masaje",
+    hora: "13:00",
+  },
+  { usuario: "ExcelCapo", servicio: "de pies", tipo: "Masaje", hora: "13:00" },
+  { usuario: "PaulaLandra", servicio: "cara", tipo: "Belleza", hora: "13:00" },
+  {
+    usuario: "LaProfeEsLaOnda",
+    servicio: "Limpieza Profunda",
+    tipo: "Tratamiento Facial",
+    hora: "13:00",
+  },
+  {
+    usuario: "GonzaAhre",
+    servicio: "masade de piedras",
+    tipo: "Masaje",
+    hora: "13:00",
+  },
+];
 
 export default function Admin() {
   useLayoutEffect(() => {
@@ -216,17 +246,20 @@ export default function Admin() {
                 <Dropdown label="Horarios" options={horas} />
               </div>
             </div>
-            <div className="turno">
-              <h4>{turno.servicio}</h4>
-              <p>{turno.tipo}</p>
-              <br />
-              <strong>{turno.usuario}</strong>
-              <br />
-              <input
-                type="submit"
-                className="SecondButton"
-                value="Eliminar Reserva"
-              />
+            <div className="Turnos-container">
+              {turnos.map((turn, index) => (
+                <div className="turno" key={index}>
+                  <h4>{turn.servicio}</h4>
+                  <p>{turn.tipo}</p>
+                  <p>{turn.hora}</p>
+                  <strong>{turn.usuario}</strong>
+                  <input
+                    type="submit"
+                    className="SecondButton"
+                    value="Eliminar"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>

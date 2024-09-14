@@ -62,7 +62,8 @@
   flex-direction: column;
   text-align: left;
   padding: 0 0 15px;
-  width: 150px;
+  min-width: 130px;
+  max-width: 200px;
   margin: 0;
   border-radius: 8px;
   background-color: var(--blanco);
@@ -125,15 +126,47 @@
   align-items: center;
 }
 
-.admin-page .turns-section .turno {
+.Turnos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  width: 95%;
+  margin: 5px auto 30px;
+  padding: 5px 0px 15px;
+}
+.Turnos-container .turno {
   display: flex;
   flex-direction: column;
   background-color: var(--blanco);
-  width: 200px;
   align-items: center;
-  padding: 15px 0px;
-  margin: 20px 0 -5px;
   border-radius: 15px;
-  box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.07);
-  /*display: none;*/
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.07);
+  padding: 15px 15px;
+  margin: 20px 0 0px;
+  justify-content: space-between;
+  gap: 10px;
+}
+.Turnos-container .turno h4 {
+  margin: 5px 0;
+  color: var(--rosa);
+  font-size: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 650px) {
+  .Turnos-container .turno h4 {
+    margin: 5px 0;
+    color: var(--rosa);
+    font-size: 14px;
+    text-align: center;
+  }
+  .Turnos-container .turno p {
+    font-size: 12px;
+  }
+  .Turnos-container .turno strong {
+    font-size: 11px;
+  }
+  .Turnos-container input {
+    font-size: 11px;
+    padding: 5px;
+  }
 }
