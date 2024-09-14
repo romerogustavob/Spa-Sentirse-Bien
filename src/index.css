@@ -13,6 +13,7 @@
   --rosa-fuerte: #f8dee7;
   --header: rgba(255, 255, 255, 0.95);
   --contenedor: rgba(255, 255, 255, 0.8);
+  --footer: #1b2b19de;
 }
 html {
   scroll-behavior: smooth;
@@ -41,6 +42,15 @@ h1 {
 p {
   font-size: 15px;
   margin: 0;
+}
+input[type="date"] {
+  padding: 8px;
+  border: 2px solid var(--rosa-fuerte);
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--rosa);
+  background-color: var(--rosa-claro);
+  font-weight: bold;
 }
 .textbox {
   font-family: Arial, sans-serif;

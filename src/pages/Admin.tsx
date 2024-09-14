@@ -58,6 +58,17 @@ const photos: Media[] = [
   },
 ];
 
+type Turno = {
+  usuario: string;
+  servicio: string;
+  tipo: string;
+};
+const turno: Turno = {
+  usuario: "JulianCodina",
+  servicio: "Antiestres",
+  tipo: "Masaje",
+};
+
 export default function Admin() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -121,7 +132,7 @@ export default function Admin() {
               <div className="par">
                 <div className="file">
                   <label htmlFor="file-upload" className="SecondButton">
-                    Seleccionar imagen
+                    Subir imagen
                   </label>
                   <input
                     id="file-upload"
@@ -179,26 +190,43 @@ export default function Admin() {
                 <input type="submit" className="MainButton" value="Guardar" />
               </div>
             </div>
-            <div className="turns-section">
-              <h3>Turnos</h3>
-              <div className="buttons">
-                <div className="par">
-                  <Dropdown label="Horarios" options={horas} />
-                  <input
-                    type="text"
-                    className="textbox"
-                    placeholder="Agregar hora"
-                  />
-                </div>
-                <div className="par">
-                  <input type="submit" className="MainButton" value="Guardar" />
-                  <input
-                    type="submit"
-                    className="SecondButton"
-                    value="Borrar Horas"
-                  />
-                </div>
+          </div>
+          <div className="hours-section">
+            <h3>Horarios</h3>
+            <div className="buttons">
+              <div className="par">
+                <Dropdown label="Horarios" options={horas} />
+                <input
+                  type="text"
+                  className="textbox"
+                  placeholder="Agregar hora"
+                />
               </div>
+              <div className="par">
+                <input type="submit" className="MainButton" value="Guardar" />
+                <input type="submit" className="SecondButton" value="Borrar" />
+              </div>
+            </div>
+          </div>
+          <div className="turns-section">
+            <h3>Turnos</h3>
+            <div className="buttons">
+              <div className="par">
+                <input type="date" />
+                <Dropdown label="Horarios" options={horas} />
+              </div>
+            </div>
+            <div className="turno">
+              <h4>{turno.servicio}</h4>
+              <p>{turno.tipo}</p>
+              <br />
+              <strong>{turno.usuario}</strong>
+              <br />
+              <input
+                type="submit"
+                className="SecondButton"
+                value="Eliminar Reserva"
+              />
             </div>
           </div>
         </div>
