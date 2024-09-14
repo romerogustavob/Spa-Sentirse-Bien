@@ -17,7 +17,9 @@ const newsSchema = new mongoose.Schema({
         default: Date.now
     },
     author: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        require: true
     },
 },    {
     timestamps: true

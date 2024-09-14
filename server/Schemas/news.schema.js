@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-export const createNewsSchame = z.object({
+export const createNewsSchema = z.object({
     title: z.string({
         required_error: "El título de la noticia es requerido."
     }),

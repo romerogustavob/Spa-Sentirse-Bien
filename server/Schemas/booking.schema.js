@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-export const createBookengSchema = z.object({
+export const createBookingSchema = z.object({
     service: z.string({
         required_error: "El servicio es requerido."
     }),
