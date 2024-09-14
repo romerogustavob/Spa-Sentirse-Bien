@@ -21,6 +21,9 @@ const userSchema = new Schema({
     surnames: {
         type: String,
     },
+    profilepic: {
+       // type: ImageBitmap
+    },
     sex: {
         type: Boolean,
     },

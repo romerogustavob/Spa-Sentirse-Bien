@@ -19,11 +19,6 @@ const newsSchema = new mongoose.Schema({
     author: {
         type: String,
     },
-    status: {
-        type: Boolean,
-        default: true
-    }
-
 },    {
     timestamps: true
 })
