@@ -17,14 +17,14 @@
   flex-direction: column;
   width: 80vw;
   padding: 50px 40px 35px;
-  margin: 130px 0 30px;
+  margin: 130px 0 100px;
   background-color: var(--contenedor);
   border-radius: 30px;
 }
 .turn-container .titulo h1 {
   letter-spacing: 5px;
 }
-hr {
+.misTurnos-container hr {
   color: var(--rosa);
   border-style: solid;
   margin: 20px 0 0px;
@@ -52,7 +52,7 @@ hr {
   padding: 15px;
   justify-content: space-between;
 }
-.turno h4 {
+.misTurnos-container .turno h4 {
   margin: 5px 0;
   color: var(--rosa);
   font-size: 20px;
@@ -71,14 +71,14 @@ hr {
 }
 
 @media screen and (max-width: 900px) {
-  .turno {
+  .misTurnos-container .turno {
     padding: 6px;
   }
-  .turno p {
+  .misTurnos-container .turno p {
     margin: 0px;
     font-size: 11px;
   }
-  .turno h4 {
+  .misTurnos-container .turno h4 {
     font-size: 15px;
   }
   .misTurnos-container {
@@ -98,13 +98,13 @@ hr {
     border-radius: 0px;
     padding-top: 80px;
   }
-  .turno {
+  .misTurnos-container .turno {
     padding: 6px;
   }
-  .turno p {
+  .misTurnos-container .turno p {
     font-size: 10px;
   }
-  .turno h4 {
+  .misTurnos-container .turno h4 {
     font-size: 13px;
   }
   .misTurnos-container .SecondButton {
@@ -116,10 +116,10 @@ hr {
   }
 }
 @media screen and (max-width: 385px) {
-  .turno {
+  .misTurnos-container .turno {
     width: 130px;
   }
-  .turno h4 {
+  .misTurnos-container .turno h4 {
     font-size: 11px;
   }
 }

@@ -36,6 +36,12 @@ const news: Media[] = [
     texto:
       "Prueba noticia 2 Prueba noticia 2 Prueba noticia 2 Prueba noticia 2 Prueba noticia 2",
   },
+  {
+    img: "src/assets/noticia1.jpeg",
+    titulo: "Titulo noticia 2",
+    texto:
+      "Prueba noticia 2 Prueba noticia 2 Prueba noticia 2 Prueba noticia 2 Prueba noticia 2",
+  },
 ];
 const photos: Media[] = [
   {
@@ -55,6 +61,41 @@ const photos: Media[] = [
   },
   {
     img: "src/assets/Dermohealth.jpg",
+  },
+];
+
+type Turno = {
+  usuario: string;
+  servicio: string;
+  tipo: string;
+  hora: string;
+};
+const turnos: Turno[] = [
+  {
+    usuario: "JulianCodina",
+    servicio: "Antiestres",
+    tipo: "Masaje",
+    hora: "13:00",
+  },
+  {
+    usuario: "AstridPuta",
+    servicio: "Descontracturante",
+    tipo: "Masaje",
+    hora: "13:00",
+  },
+  { usuario: "ExcelCapo", servicio: "de pies", tipo: "Masaje", hora: "13:00" },
+  { usuario: "PaulaLandra", servicio: "cara", tipo: "Belleza", hora: "13:00" },
+  {
+    usuario: "LaProfeEsLaOnda",
+    servicio: "Limpieza Profunda",
+    tipo: "Tratamiento Facial",
+    hora: "13:00",
+  },
+  {
+    usuario: "GonzaAhre",
+    servicio: "masade de piedras",
+    tipo: "Masaje",
+    hora: "13:00",
   },
 ];
 
@@ -121,7 +162,7 @@ export default function Admin() {
               <div className="par">
                 <div className="file">
                   <label htmlFor="file-upload" className="SecondButton">
-                    Seleccionar imagen
+                    Subir imagen
                   </label>
                   <input
                     id="file-upload"
@@ -179,26 +220,46 @@ export default function Admin() {
                 <input type="submit" className="MainButton" value="Guardar" />
               </div>
             </div>
-            <div className="turns-section">
-              <h3>Turnos</h3>
-              <div className="buttons">
-                <div className="par">
-                  <Dropdown label="Horarios" options={horas} />
-                  <input
-                    type="text"
-                    className="textbox"
-                    placeholder="Agregar hora"
-                  />
-                </div>
-                <div className="par">
-                  <input type="submit" className="MainButton" value="Guardar" />
+          </div>
+          <div className="hours-section">
+            <h3>Horarios</h3>
+            <div className="buttons">
+              <div className="par">
+                <Dropdown label="Horarios" options={horas} />
+                <input
+                  type="text"
+                  className="textbox"
+                  placeholder="Agregar hora"
+                />
+              </div>
+              <div className="par">
+                <input type="submit" className="MainButton" value="Guardar" />
+                <input type="submit" className="SecondButton" value="Borrar" />
+              </div>
+            </div>
+          </div>
+          <div className="turns-section">
+            <h3>Turnos</h3>
+            <div className="buttons">
+              <div className="par">
+                <input type="date" />
+                <Dropdown label="Horarios" options={horas} />
+              </div>
+            </div>
+            <div className="Turnos-container">
+              {turnos.map((turn, index) => (
+                <div className="turno" key={index}>
+                  <h4>{turn.servicio}</h4>
+                  <p>{turn.tipo}</p>
+                  <p>{turn.hora}</p>
+                  <strong>{turn.usuario}</strong>
                   <input
                     type="submit"
                     className="SecondButton"
-                    value="Borrar Horas"
+                    value="Eliminar"
                   />
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

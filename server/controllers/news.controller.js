@@ -69,3 +69,30 @@ export const updateNews = async (req, res) => {
         res.status(500).json({ message: 'Error al actualizar la noticia.', error });
     }
 };
+
+export const getNews = async(req, res) => {
+    try {
+        // Obtener los parámetros de fecha desde la consulta de la solicitud (query params)
+        const { startDate, endDate } = req.query;
+
+        // Construir un filtro basado en las fechas, si son proporcionadas
+        const dateFilter = {};
+        
+        if (startDate) {
+            dateFilter.createdAt = { $gte: new Date(startDate) }; // Mayor o igual a la fecha de inicio
+        }
+        
+        if (endDate) {
+            dateFilter.createdAt = dateFilter.createdAt || {};
+            dateFilter.createdAt.$lte = new Date(endDate); // Menor o igual a la fecha de fin
+        }
+
+        // Ejecutar la consulta con el filtro de fechas si existe
+        const news = await New.find(dateFilter);
+        
+        res.json(news);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Error al obtener noticias." });
+    }
+}
