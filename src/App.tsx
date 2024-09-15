@@ -9,32 +9,31 @@ import Perfil from "./pages/Perfil";
 import { PopUpProvider } from "./components/PopUpContext";
 import Admin from "./pages/Admin";
 import Footer from "./components/footer";
-import { AuthProvider } from './context/AuthContext.tsx'
+import { AuthProvider } from "./context/AuthContext.tsx";
 import ProtectedRoute from "./ProtectedRoutes.tsx";
 
 function App() {
   return (
     <>
-    <AuthProvider>
-      <PopUpProvider>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/registro" element={<Register />} />
-          <Route path="/galeria" element={<Gallery />} />
-          <Route path="/servicios" element={<Services />} />
-          
-          <Route element={<ProtectedRoute/>}>
-            <Route path="/turnos" element={<Turn />} />
-            <Route path="/perfil" element={<Perfil />} />
-            <Route path="/admin" element={<Admin />} />
-          </Route>
-        </Routes>
-        <Footer />
-      </PopUpProvider>
-    </AuthProvider>
-      
+      <AuthProvider>
+        <PopUpProvider>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/registro" element={<Register />} />
+            <Route path="/galeria" element={<Gallery />} />
+            <Route path="/servicios" element={<Services />} />
+
+            <Route element={<ProtectedRoute />}>
+              <Route path="/turnos" element={<Turn />} />
+              <Route path="/perfil" element={<Perfil />} />
+              <Route path="/admin" element={<Admin />} />
+            </Route>
+          </Routes>
+          <Footer />
+        </PopUpProvider>
+      </AuthProvider>
     </>
   );
 }

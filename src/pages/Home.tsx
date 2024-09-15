@@ -14,6 +14,9 @@ function Home() {
 
   const { openPopUp } = usePopUp();
 
+  // Simulando que el usuario es admin
+  const isAdmin = true; // Cambia esto a false para simular que el usuario no es admin
+
   return (
     <div className="Home-page">
       <div className="background-image" />
@@ -37,9 +40,13 @@ function Home() {
               >
                 Contactanos
               </button>
-              <Link to="/admin" className="SecondButton">
-                Administrador
-              </Link>
+
+              {/* Rendnerizado condicional */}
+              {isAdmin && (
+                <Link to="/admin" className="SecondButton">
+                  Administrador
+                </Link>
+              )}
             </div>
           </div>
           <TurnPopUp />

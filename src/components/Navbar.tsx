@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
+  // Simulando el estado de inicio de sesión
+  const isLoggedIn = false; // Cambia esto a true para simular que el usuario está logueado
+
   return (
     <header>
       <div className="marca">
@@ -17,12 +20,17 @@ function Navbar() {
         <Link to="/galeria">Galería</Link>
         <Link to="/servicios">Servicios</Link>
         <Link to="/turnos">Turnos</Link>
-        <Link to="/perfil" className="SecondButton">
-          Perfil
-        </Link>
-        <Link to="/login" className="MainButton">
-          Ingresar
-        </Link>
+
+        {/* Rendnerizado condicional */}
+        {isLoggedIn ? (
+          <Link to="/perfil" className="SecondButton">
+            Perfil
+          </Link>
+        ) : (
+          <Link to="/login" className="MainButton">
+            Ingresar
+          </Link>
+        )}
       </div>
     </header>
   );
