@@ -4,6 +4,9 @@ import "./comments.css";
 // Simulamos un usuario logueado o no logueado con una constante
 const loggedInUser: string | null = "Juan Pérez"; // Cambiar a `null` si no está logueado
 
+// Simulando que el usuario es admin
+const isAdmin = false; // Cambia esto a false para simular que el usuario no es admin
+
 type Comment = {
   name: string;
   text: string;
@@ -102,7 +105,7 @@ export default function Comments() {
               </ul>
             )}
             {/* Mostrar el campo de respuesta si aún no hay respuesta */}
-            {!comment.reply && (
+            {!comment.reply && isAdmin && (
               <>
                 {replyIndex === index ? (
                   <form onSubmit={(e) => handleReplySubmit(e, index)}>
@@ -128,7 +131,7 @@ export default function Comments() {
               </>
             )}
             {/* Botón de borrar siempre visible */}
-            <button className="delete">Borrar</button>
+            {isAdmin && <button className="delete">Borrar</button>}
           </li>
         ))}
       </ul>

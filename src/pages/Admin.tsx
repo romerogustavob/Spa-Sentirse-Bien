@@ -18,6 +18,12 @@ const horas: string[] = [
   "19:00",
   "20:00",
 ];
+const tipos: string[] = [
+  "Masaje",
+  "Belleza",
+  "Tratamientos Faciales",
+  "Tratamientos Corporales",
+];
 
 type Media = {
   img: string;
@@ -243,7 +249,7 @@ export default function Admin() {
             <div className="buttons">
               <div className="par">
                 <input type="date" />
-                <Dropdown label="Horarios" options={horas} />
+                <Dropdown label="Tipo" options={tipos} />
               </div>
             </div>
             <div className="Turnos-container">

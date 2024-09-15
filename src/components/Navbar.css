@@ -40,14 +40,12 @@ header .enlaces {
   width: auto;
   padding: 6px 12px;
   font-size: 15px;
-  display: none;
 }
 
 .enlaces .MainButton {
   width: auto;
   padding: 6px 8px;
   font-size: 15px;
-  /*display: none;*/
 }
 
 @font-face {
