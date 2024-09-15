@@ -1,27 +1,19 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import { registerRequest, loginRequest, verificarToken } from "../api/auth";
 import Cookies from 'js-cookie';
+import IUser from '../types/IUser.ts'
 
 // Definir la interfaz para el usuario
-interface User {
-  id: string,
-  email: string;
-  username: string;
-  password: string;
-  names: string,
-  surnames: string,
-  sex: boolean,
-  isAdmin: boolean
-}
+
 
 // Definir la interfaz del contexto de autenticación
 interface AuthContextType {
-  user: User | null;
+  user: IUser | null;
   isAuthenticated: boolean;
   loading: boolean;
   errors: string[];
-  signup: (user: User) => Promise<void>;
-  signin: (user: User) => Promise<void>;
+  signup: (user: IUser) => Promise<void>;
+  signin: (user: IUser) => Promise<void>;
 }
 
 // Crear contexto con el tipo definido
@@ -43,12 +35,12 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<IUser | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [errors, setErrors] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
-  const signup = async (user: User) => {
+  const signup = async (user: IUser) => {
     try {
       const res = await registerRequest(user);
       console.log(res.data);
@@ -60,7 +52,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     }
   };
 
-  const signin = async (user: User) => {
+  const signin = async (user: IUser) => {
     try {
       const res = await loginRequest(user);
       console.log(res);
