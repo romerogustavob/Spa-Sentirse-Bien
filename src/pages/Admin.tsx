@@ -154,7 +154,7 @@ export default function Admin() {
                   type="text"
                   value={titulo}
                   onChange={handleChange}
-                  placeholder="Titulo"
+                  placeholder="Título"
                 />
                 <input
                   className="textbox"
@@ -162,7 +162,7 @@ export default function Admin() {
                   type="text"
                   value={text}
                   onChange={handleChange}
-                  placeholder="Descripcion"
+                  placeholder="Descripción"
                 />
               </div>
               <div className="par">

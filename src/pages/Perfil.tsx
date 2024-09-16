@@ -109,7 +109,10 @@ export default function Perfil() {
                   />
                 </div>
                 <div className="par">
-                  <Dropdown label={"Genero"} options={["Hombre", "Mujer"]} />
+                  <Dropdown
+                    label={"Genero"}
+                    options={["Hombre", "Mujer", "Otro"]}
+                  />
                   <input
                     className="textbox"
                     type="text"

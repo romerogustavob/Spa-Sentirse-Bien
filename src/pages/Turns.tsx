@@ -95,11 +95,7 @@ export default function Turn() {
                   <p>{turn.dia}</p>
                   <p>{turn.hora}</p>
                   <br />
-                  <input
-                    type="submit"
-                    className="SecondButton"
-                    value="Eliminar Reserva"
-                  />
+                  <input type="submit" className="delete" value="Eliminar" />
                 </div>
               </div>
             ))}
