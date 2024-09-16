@@ -24,11 +24,12 @@ function App() {
             <Route path="/registro" element={<Register />} />
             <Route path="/galeria" element={<Gallery />} />
             <Route path="/servicios" element={<Services />} />
-            <Route path="/turnos" element={<Turn />} />
-            <Route path="/perfil" element={<Perfil />} />
-            <Route path="/admin" element={<Admin />} />
 
-            <Route element={<ProtectedRoute />}></Route>
+            <Route element={<ProtectedRoute />}>
+              <Route path="/turnos" element={<Turn />} />
+              <Route path="/perfil" element={<Perfil />} />
+              <Route path="/admin" element={<Admin />} />
+            </Route>
           </Routes>
           <Footer />
         </PopUpProvider>
