@@ -38,7 +38,7 @@ function Home() {
                 className="SecondButton"
                 onClick={() => openPopUp("form")}
               >
-                Contactanos
+                Contáctanos
               </button>
 
               {/* Rendnerizado condicional */}

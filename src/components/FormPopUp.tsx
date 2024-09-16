@@ -8,6 +8,7 @@ export function FormPopUp() {
   const frmContact = {
     user_name: "",
     email: "",
+    num: "",
     message: "",
     reply_to: "",
   };
@@ -87,13 +88,25 @@ export function FormPopUp() {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="nombre">Email</label>
+              <label htmlFor="email">Email</label>
               <input
                 type="text"
                 id="email"
                 name="email"
                 className="textbox"
                 value={contact.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="num">Número de teléfono</label>
+              <input
+                type="text"
+                id="num"
+                name="num"
+                className="textbox"
+                value={contact.num}
                 onChange={handleChange}
                 required
               />

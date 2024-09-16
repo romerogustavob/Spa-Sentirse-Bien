@@ -71,10 +71,15 @@
 }
 .first .buttonsFirst button {
   width: 150px;
-  padding: 15px 0;
+  padding: 15px 5px;
+  font-size: 15px;
 }
 .first .buttonsFirst a {
   align-content: center;
+  width: 140px;
+  text-align: center;
+  padding: 15px 5px;
+  font-size: 15px;
 }
 
 .about {
@@ -226,10 +231,10 @@
     margin-top: 8px;
     font-size: 50px;
   }
-  .first .SecondButton,
-  .first .MainButton {
+  .first .buttonsFirst button {
     width: 130px;
-    padding: 15px 0;
+    padding: 10px 5px;
+    font-size: 12px;
   }
   .top .container {
     gap: 15px 8px;

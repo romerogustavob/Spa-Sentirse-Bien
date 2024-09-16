@@ -44,11 +44,6 @@
   text-align: left;
 }
 
-.turno-component p {
-  opacity: 0.6;
-  margin: 0 0 0px 10px;
-}
-
 .turno-component h2 {
   font-size: 20px;
   margin-bottom: 10px;
@@ -98,7 +93,7 @@
 
 .turno-component .buttons {
   display: flex;
-  margin: 20px auto 10px;
+  margin: 20px auto 20px;
   align-items: center;
   justify-content: center;
   gap: 10%;
@@ -109,6 +104,11 @@
   padding: 10px 15px;
   font-size: 16px;
   min-width: 100px;
+}
+.turno-component-content form p {
+  font-size: 13px;
+  opacity: 0.6;
+  margin: 0 0 0px 10px;
 }
 
 @media screen and (max-width: 500px) {

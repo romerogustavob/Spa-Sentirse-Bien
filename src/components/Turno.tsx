@@ -48,7 +48,7 @@ export function TurnPopUp() {
               <img src="./src/assets/calendario.png" />
               <h1>AGENDÁ TU TURNO</h1>
             </div>
-            <p>Completa el siguiente formulario para reservar tu turno</p>
+            <p>Completa el siguiente formulario para reservar tu turno.</p>
             <hr />
             <h2>Reserva</h2>
             <div className="Contenedor-dropdowns">
@@ -79,20 +79,25 @@ export function TurnPopUp() {
               <Box titulo="Hora" label="Seleccione Horario" options={horas} />
             </div>
             <div className="detalles">
-              <h4>Informacion importante</h4>
+              <h4>Información importante</h4>
               <textarea
                 className="textbox"
                 name="informacion"
                 id="informacion"
-                placeholder="Escriba brevemente informacion que debera ser considerada por los empleados"
+                placeholder="Escriba brevemente información que debera ser considerada por los empleados"
               />
             </div>
+            <h2>Precio: $5000</h2>
             <div className="buttons">
               <button className="MainButton">Agendar</button>
               <button className="SecondButton" onClick={closePopUp}>
                 Cancelar
               </button>
             </div>
+            <p className="pagos">
+              La transacción se realiza de forma presencial. Aceptamos como
+              método de pago: efectivo, transferencia, débito y credito.
+            </p>
           </form>
         </div>
       </div>
